@@ -1,58 +1,15 @@
-/* ------ */
-/* GLOBAL */
-/* ------ */
-
-main {
-    padding: 20px;
-    display: grid;
-    grid-template: 200px calc(100vh - 250px) / 250px 3fr 300px ;
-    gap: 10px;
-    min-height: 100vh;
-    /* border: 1px solid red; */
-}
-
-/* ---------- */
-/* NAVIGATION */
-/* ---------- */
-
 .nav {
-    grid-area: 1 / 1 / 3 / 2;
+    background-color: pink;
 }
-
-nav {
-    /* padding: 10px; */
-    height: calc(100vh - 40px);
-    background-color: #3E1BBC;
-    color: white;
-}
-
-/* ------ */
-/* HEADER */
-/* ------ */
 
 .header {
-    /* padding: 10px; */
-    grid-area: 1 / 2 / 2 / 4;
-    border: 1px solid red;
+    background-color: lightblue;
 }
 
-/* ------------- */
-/* RIGHT SIDEBAR */
-/* ------------- */
-
-.right-sidebar {
-    /* padding: 10px; */
-    grid-area: 2 / 3 / 3 / 4;
-    background-color: pink;
-    border: 1px solid red;
+.primary-content {
+    background-color: lightgreen;
 }
 
-/* ------- */
-/* CONTENT */
-/* ------- */
-
-.content {
-    /* padding: 10px; */
-    grid-area: 2 / 2 / 3 / 3;
-    border: 1px solid red;
+.secondary-content {
+    background-color: plum;
 }
