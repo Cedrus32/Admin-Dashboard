@@ -2,6 +2,11 @@ body {
     background-color: rgb(25, 25, 25);
 }
 
+.container {
+    --container-padding: 1vh;
+    padding: var(--container-padding);
+}
+
 .container-item {
     padding: 10px;
 }
@@ -51,7 +56,7 @@ body {
 
     .primary-content {
         grid-row: 4 / 5;
-        min-height: calc(100vh - var(--used-height))
+        min-height: calc(98vh - var(--used-height))
     }
 
     .secondary-content {
@@ -91,7 +96,7 @@ body {
 
     .primary-content {
         grid-area: 3 / 1 / 4 / 2;
-        min-height: calc(100vh - var(--used-height));
+        min-height: calc(98vh - var(--used-height));
     }
 
     .secondary-content {
@@ -131,12 +136,12 @@ body {
         grid-area: 1 / 1 / 3 / 2;
         /* position: sticky; */
         /* top: 0px; left: 0px; */
-        height: 100vh;
+        height: calc(98vh);
     }
 
     .primary-content {
         grid-area: 2 / 2 / 3 / 3;
-        min-height: calc(100vh - var(--used-height));
+        min-height: calc(98vh - var(--used-height));
     }
 
     .secondary-content {
