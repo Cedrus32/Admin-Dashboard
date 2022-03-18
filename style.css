@@ -41,7 +41,7 @@ body {
         --footer-height: 75px;
 
         --secondary-min-height: 100px;
-        --used-space: calc(var(--header-height) + var(--nav-height) + var(--footer-height) + var(--secondary-min-height) + 40px)
+        --used-height: calc(var(--header-height) + var(--nav-height) + var(--footer-height) + var(--secondary-min-height) + 40px)
     }
 
     .container {
@@ -52,7 +52,7 @@ body {
 
     .primary-content {
         grid-row: 4 / 5;
-        min-height: calc(100vh - var(--used-space))
+        min-height: calc(100vh - var(--used-height))
     }
 
     .secondary-content {
@@ -64,9 +64,21 @@ body {
 
 /* TABLET -------------------- */
 @media only screen and (min-width: 551px) and (max-width: 1100px) {
+    :root {
+        --header-height: 125px;
+        --nav-height: 75px;
+        --content-height: 1fr;
+        --footer-height: 75px;
+
+        --primary-width: 7fr;
+        --secondary-width: 3fr;
+
+        --used-height: calc(var(--header-height) + var(--nav-height) + var(--footer-height) + 30px)
+    }
+
     .container {
         display: grid;
-        grid-template: 125px 75px 1fr 75px / 7fr 3fr;
+        grid-template: var(--header-height) var(--nav-height) var(--content-height) var(--footer-height) / var(--primary-width) var(--secondary-width);
         gap: 10px;
     }
 
@@ -80,7 +92,7 @@ body {
 
     .primary-content {
         grid-area: 3 / 1 / 4 / 2;
-        min-height: calc(100vh - 305px);
+        min-height: calc(100vh - var(--used-height));
     }
 
     .secondary-content {
