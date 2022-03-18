@@ -33,20 +33,31 @@ body {
 /* MOBILE -------------------- */
 
 @media only screen and (max-width: 550px) {
-    .container {
+    :root {
+        --header-height: 125px;
+        --nav-height: 75px;
+        --primary-height: 1fr;
+        --secondary-height: auto;
+        --footer-height: 75px;
 
+        --secondary-min-height: 100px;
+        --used-space: calc(var(--header-height) + var(--nav-height) + var(--footer-height) + var(--secondary-min-height) + 40px)
+    }
+
+    .container {
         display: grid;
-        grid-template: 125px 75px 1fr auto 75px / auto;
+        grid-template: var(--header-height) var(--nav-height) var(--primary-height) var(--secondary-height) var(--footer-height) / auto;
         gap: 10px;
     }
 
     .primary-content {
         grid-row: 4 / 5;
-        min-height: calc(100vh - )
+        min-height: calc(100vh - var(--used-space))
     }
 
     .secondary-content {
         grid-row: 3 / 4;
+        min-height: var(--secondary-min-height);
     }
 
 }
