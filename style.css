@@ -24,16 +24,26 @@ body {
     background-color: pink;
 }
 
+.footer {
+    background-color: peachpuff;
+}
+
+nav ul,
+footer ul {
+    list-style: none;
+}
+
+nav ul li,
+footer ul li {
+    padding: 0.4em;
+}
+
 .primary-content {
     background-color: lightgreen;
 }
 
 .secondary-content {
     background-color: plum;
-}
-
-.footer {
-    background-color: peachpuff;
 }
 
 /* -------------- */
