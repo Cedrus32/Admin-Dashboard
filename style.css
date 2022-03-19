@@ -1,6 +1,11 @@
-/* body {
-    background-color: rgb(25, 25, 25);
-} */
+@font-face {
+    font-family: 'Roboto';
+    src: url(./assets/Roboto-Light.ttf);
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
 
 .container {
     --container-padding: 1vh;
