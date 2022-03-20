@@ -28,15 +28,18 @@ ul {
 /* HEADERS -------------------- */
 .header1 {
     background-color: lightblue;
+    grid-area: header1;
 }
 
 .header2 {
     background-color: lightblue;
+    grid-area: header2;
 }
 
 /* NAV -------------------- */
 .nav {
     background-color: pink;
+    grid-area: nav;
 }
 
 .nav ul {
@@ -44,19 +47,21 @@ ul {
     grid-template: repeat(10, 1fr) / auto;
 }
 
+/* EXPANDER -------------------- */
+.expand {
+    background-color: pink;
+}
+
 /* PRIMARY CONTENT -------------------- */
 .primary-content {
     background-color: lightgreen;
+    grid-area: primary-content;
 }
 
 /* SECONDARY CONTENT -------------------- */
 .secondary-content {
     background-color: plum;
-}
-
-/* EXPANDER -------------------- */
-.expand {
-    background-color: pink;
+    grid-area: secondary-content;
 }
 
 /* -------------- */
@@ -67,7 +72,7 @@ ul {
 @media only screen and (max-width: 550px) {
     .container {
         display: grid;
-        grid-template: repeat(5, auto) / auto;
+        grid-template-rows: repeat(5, auto);
         grid-template-areas: 'header1'
                              'nav'
                              'header2'
@@ -76,28 +81,19 @@ ul {
         gap: 10px;
     }
 
-    .nav {
-        grid-area: nav;
-    }
-
-    .header2 {
-        grid-area: header2;
-    }
-
-    .primary-content {
-        grid-area: primary-content;
-    }
-
-    .secondary-content {
-        grid-area: secondary-content;
-    }
-
     /* HIDE -------------------- */
     .nav h1,
     .expand {
         display: none;
     }
 
+    /* NAVIGATION -------------------- */
+    .nav ul {
+        border: 1px dashed red;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(10, 1fr);
+    }
 }
 
 /* TABLET -------------------- */
@@ -123,31 +119,18 @@ ul {
         gap: 10px;
     }
 
-    .header1 {
-        grid-area: header1;
-    }
-
-    .nav {
-        grid-area: nav;
-    }
-
-    .header2 {
-        grid-area: header2;
-    }
-
-    .primary-content {
-        grid-area: primary-content;
-        min-height: calc(98vh - var(--used-height));
-    }
-
-    .secondary-content {
-        grid-area: secondary-content;
-    }
-
     /* HIDE -------------------- */
     .nav h1,
     .expand {
         display: none;
+    }
+
+    /* NAVIGATION -------------------- */
+    .nav ul {
+        border: 1px dashed red;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(10, 1fr);
     }
 }
 
@@ -174,25 +157,5 @@ ul {
                              'nav    primary-content    secondary-content';
 
         gap: 10px;
-    }
-
-    .header1 {
-        grid-area: header1;
-    }
-
-    .header2 {
-        grid-area: header2;
-    }
-    
-    .nav {
-        grid-area: nav;
-    }
-
-    .primary-content {
-        grid-area: primary-content;
-    }
-
-    .secondary-content {
-        grid-area: secondary-content;
     }
 }
