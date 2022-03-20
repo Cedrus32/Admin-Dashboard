@@ -42,14 +42,24 @@ ul {
     grid-area: nav;
 }
 
+.nav h1 {
+    display: none;
+}
+
 .nav ul {
     display: grid;
     grid-template: repeat(10, 1fr) / auto;
 }
 
+.nav ul {
+    display: grid;
+    grid-template: auto / repeat(10, 1fr);
+}
+
 /* EXPANDER -------------------- */
 .expand {
     background-color: pink;
+    display: none;
 }
 
 /* PRIMARY CONTENT -------------------- */
@@ -81,20 +91,6 @@ ul {
                              'primary-content';
         gap: 10px;
     }
-
-    /* HIDE -------------------- */
-    .nav h1,
-    .expand {
-        display: none;
-    }
-
-    /* NAVIGATION -------------------- */
-    .nav ul {
-        border: 1px dashed red;
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: repeat(10, 1fr);
-    }
 }
 
 /* TABLET -------------------- */
@@ -120,20 +116,6 @@ ul {
                              'primary-content    secondary-content';
         gap: 10px;
     }
-
-    /* HIDE -------------------- */
-    .nav h1,
-    .expand {
-        display: none;
-    }
-
-    /* NAVIGATION -------------------- */
-    .nav ul {
-        border: 1px dashed red;
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: repeat(10, 1fr);
-    }
 }
 
 /* DESKTOP -------------------- */
@@ -157,5 +139,22 @@ ul {
                              'nav    header2            header2'
                              'nav    primary-content    secondary-content';
         gap: 10px;
+    }
+
+    /* SHOW -------------------- */
+    .nav h1,
+    .expand {
+        display: contents;
+    }
+
+    /* NAVIGATION -------------------- */
+    .nav {
+        display: grid;
+        grid-template: 2fr auto 1fr/ auto;
+    }
+
+    .nav ul {
+        display: grid;
+        grid-template: repeat(10, 1fr) / auto;
     }
 }
