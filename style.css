@@ -89,6 +89,19 @@ ul {
 .primary-content {
     background-color: lightgreen;
     grid-area: primary-content;
+
+    display: grid;
+    grid-template: auto 1fr / auto;
+}
+
+.proj-cards {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+}
+
+.card {
+    max-width: 1fr; height: 16em;
 }
 
 /* SECONDARY CONTENT -------------------- */
