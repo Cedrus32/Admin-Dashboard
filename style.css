@@ -76,11 +76,6 @@ ul {
 
 .nav ul {
     display: grid;
-    grid-template: repeat(10, 1fr) / auto;
-}
-
-.nav ul {
-    display: grid;
     grid-template: auto / repeat(10, 1fr);
 }
 
@@ -100,6 +95,9 @@ ul {
 .secondary-content {
     background-color: plum;
     grid-area: secondary-content;
+
+    display: grid;
+    grid-template: auto 1fr / auto;
 }
 
 /* -------------- */
@@ -120,8 +118,10 @@ ul {
         gap: 10px;
     }
 
-    /* HEADERS -------------------- */
-
+    /* SECONARY CONTENT -------------------- */
+    .secondary-content {
+        grid-template: auto / 1fr 1fr;
+    }
 }
 
 /* TABLET -------------------- */
