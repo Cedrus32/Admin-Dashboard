@@ -31,6 +31,25 @@ ul {
     grid-area: header1;
 }
 
+.header1 header {
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+}
+
+.profile-icon,
+.linkdrop,
+.greeting {
+    display: flex;
+}
+
+.linkdrop {
+    justify-content: flex-end;
+}
+
+.greeting {
+    display: none;
+}
+
 .header2 {
     background-color: lightblue;
     grid-area: header2;
@@ -91,6 +110,9 @@ ul {
                              'primary-content';
         gap: 10px;
     }
+
+    /* HEADERS -------------------- */
+
 }
 
 /* TABLET -------------------- */
@@ -141,10 +163,30 @@ ul {
         gap: 10px;
     }
 
-    /* SHOW -------------------- */
+    /* SHOW/HIDE -------------------- */
     .nav h1,
-    .expand {
+    .expand,
+    .greeting {
         display: contents;
+    }
+
+    .linkdrop {
+        display: none;
+    }
+
+    /* HEADERS -------------------- */
+
+    .header1 header {
+        grid-template-areas: 'greeting    profile-icon';
+    }
+
+    .greeting {
+        grid-area: greeting;
+    }
+
+    .profile-icon {
+        grid-area: profile-icon;
+        justify-content: flex-end;
     }
 
     /* NAVIGATION -------------------- */
