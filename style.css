@@ -25,7 +25,7 @@ ul {
     padding: 10px;
 }
 
-/* HEADERS -------------------- */
+/* HEADER1 -------------------- */
 .header1 {
     background-color: lightblue;
     grid-area: header1;
@@ -50,9 +50,18 @@ ul {
     display: none;
 }
 
+/* HEADER2 -------------------- */
 .header2 {
     background-color: lightblue;
     grid-area: header2;
+
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+}
+
+.proj-manage {
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* NAV -------------------- */
