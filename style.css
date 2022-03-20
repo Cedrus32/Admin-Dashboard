@@ -150,11 +150,17 @@ ul {
     /* NAVIGATION -------------------- */
     .nav {
         display: grid;
-        grid-template: 2fr auto 1fr/ auto;
+        grid-template: auto auto 1fr/ auto;
     }
 
     .nav ul {
         display: grid;
         grid-template: repeat(10, 1fr) / auto;
+    }
+
+    .expand{
+        display: flex;
+        align-content: flex-start;
+        justify-content: center;
     }
 }
