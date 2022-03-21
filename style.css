@@ -2,6 +2,10 @@
 /* GLOBAL STYLING */
 /* -------------- */
 
+:root {
+    --ui-rad: 30px;
+}
+
 @font-face {
     font-family: 'Roboto';
     src: url(./assets/Roboto-Light.ttf);
@@ -50,6 +54,7 @@ nav img,
 .header1 {
     grid-area: header1;
     background-color: #3E1BBC;
+    border-radius: var(--ui-rad);
 }
 
 .header1 header {
@@ -96,6 +101,7 @@ nav img,
     grid-area: nav;
     background-color: #3E1BBC;
     color: white;
+    border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
 }
 
 .dash-title {
@@ -234,7 +240,7 @@ nav span {
         grid-template-areas: 'nav       header1            header1'
                              'nav       header2            header2'
                              'nav       primary-content    secondary-content'
-                             'footer    footer              footer';
+                             '.         footer              footer';
         gap: 10px;
     }
 
@@ -254,6 +260,7 @@ nav span {
 
     .header1 {
         background-color: transparent;
+        border-radius: 0px;
     }
 
     .header1 header {
@@ -279,6 +286,12 @@ nav span {
     .nav {
         display: grid;
         grid-template: auto auto 1fr/ auto;
+
+        position: sticky;
+        top: var(--container-padding); left: var(--container-padding);
+        height: calc(100vh - calc(2 * var(--container-padding)));
+
+        border-radius: var(--ui-rad);
     }
 
     .dash-title {
