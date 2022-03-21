@@ -27,8 +27,8 @@ ul {
 
 /* HEADER1 -------------------- */
 .header1 {
-    background-color: lightblue;
     grid-area: header1;
+    background-color: #3E1BBC;
 }
 
 .header1 header {
@@ -46,8 +46,17 @@ ul {
     justify-content: flex-end;
 }
 
+.linkdrop img {
+    filter: invert(1);
+}
+
 .greeting {
     display: none;
+    color: white;
+}
+
+header img {
+    height: 5em; width: auto;
 }
 
 /* HEADER2 -------------------- */
@@ -66,8 +75,9 @@ ul {
 
 /* NAV -------------------- */
 .nav {
-    background-color: pink;
     grid-area: nav;
+    background-color: #3E1BBC;
+    color: white;
 }
 
 .nav h1 {
@@ -81,7 +91,6 @@ ul {
 
 /* EXPANDER -------------------- */
 .expand {
-    background-color: pink;
     display: none;
 }
 
