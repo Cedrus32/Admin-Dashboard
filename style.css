@@ -24,8 +24,19 @@ header img,
     height: 5em; width: auto;
 }
 
-.linkdrop img,
 nav img {
+    height: 1em; width: auto;
+}
+
+#expand,
+#collapse {
+    height: 1.5em; width: auto;
+}
+
+.linkdrop img,
+nav img,
+#expand,
+#collapse {
     filter: invert(1);
 }
 
@@ -96,7 +107,7 @@ nav img {
 }
 
 /* EXPANDER -------------------- */
-.expand {
+.exp-coll {
     display: none;
 }
 
@@ -213,7 +224,7 @@ nav img {
 
     /* SHOW/HIDE -------------------- */
     .nav h1,
-    .expand,
+    .exp-coll,
     .greeting {
         display: contents;
     }
@@ -255,7 +266,7 @@ nav img {
         grid-template: repeat(10, 1fr) / auto;
     }
 
-    .expand{
+    .exp-coll{
         display: flex;
         align-content: flex-start;
         justify-content: center;
