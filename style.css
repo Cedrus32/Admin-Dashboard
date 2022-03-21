@@ -24,10 +24,6 @@ header img,
     height: 5em; width: auto;
 }
 
-nav img {
-    height: 1em; width: auto;
-}
-
 #expand,
 #collapse {
     height: 1.5em; width: auto;
@@ -67,6 +63,11 @@ nav img,
     display: flex;
 }
 
+.profile-icon img {
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
 .linkdrop {
     justify-content: flex-end;
 }
@@ -99,14 +100,29 @@ nav img,
 
 .dash-title {
     display: none;
+    padding-bottom: 2em;
 }
 
-.nav ul {
+nav ul {
     display: grid;
     grid-template: auto / repeat(10, 1fr);
+    justify-items: center;
 }
 
-/* EXPANDER -------------------- */
+nav li {
+    display: flex;
+    gap: 1em;
+    width: inherit;
+}
+
+nav img {
+    height: 1em; width: auto;
+}
+
+nav span {
+    display: none;
+}
+
 .exp-coll {
     display: none;
 }
@@ -225,6 +241,7 @@ nav img,
     /* SHOW/HIDE -------------------- */
     .nav h1,
     .exp-coll,
+    nav span,
     .greeting {
         display: contents;
     }
@@ -235,17 +252,27 @@ nav img,
 
     /* HEADERS -------------------- */
 
+    .header1 {
+        background-color: transparent;
+    }
+
     .header1 header {
         grid-template-areas: 'greeting    profile-icon';
     }
 
     .greeting {
         grid-area: greeting;
+        color: black;
     }
 
     .profile-icon {
         grid-area: profile-icon;
         justify-content: flex-end;
+    }
+
+    .profile-icon img {
+        border: 1px solid black;
+        border-radius: 50%;
     }
 
     /* NAVIGATION -------------------- */
@@ -261,9 +288,11 @@ nav img,
         justify-content: center;
     }
 
-    .nav ul {
+    nav ul {
         display: grid;
         grid-template: repeat(10, 1fr) / auto;
+        justify-items: start;
+        gap: 0.5em;
     }
 
     .exp-coll{
