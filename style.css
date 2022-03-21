@@ -1,6 +1,6 @@
-/* -------------------- */
-/* GLOBAL/MIXED STYLING */
-/* -------------------- */
+/* -------------- */
+/* GLOBAL STYLING */
+/* -------------- */
 
 @font-face {
     font-family: 'Roboto';
@@ -15,9 +15,18 @@ ul {
     list-style: none;
 }
 
+/* ------------- */
+/* MIXED STYLING */
+/* ------------- */
+
 header img,
 .dash-title img {
     height: 5em; width: auto;
+}
+
+.linkdrop img,
+nav img {
+    filter: invert(1);
 }
 
 /* CONTAINER -------------------- */
@@ -49,10 +58,6 @@ header img,
 
 .linkdrop {
     justify-content: flex-end;
-}
-
-.linkdrop img {
-    filter: invert(1);
 }
 
 .greeting {
