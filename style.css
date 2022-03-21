@@ -4,6 +4,7 @@
 
 :root {
     --ui-rad: 30px;
+    --icn-gap: 0.5em;
 }
 
 @font-face {
@@ -94,6 +95,17 @@ nav img,
 .proj-manage {
     display: flex;
     justify-content: flex-end;
+    gap: var(--icn-gap);
+}
+
+.search {
+    display: flex;
+    gap: var(--icn-gap);
+}
+
+#searchbar {
+    width: auto;
+    flex-grow: 1;
 }
 
 /* NAV -------------------- */
@@ -305,7 +317,7 @@ nav span {
         display: grid;
         grid-template: repeat(10, 1fr) / auto;
         justify-items: start;
-        gap: 0.5em;
+        gap: var(--icn-gap);
     }
 
     .exp-coll{
