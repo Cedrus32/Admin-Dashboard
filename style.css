@@ -1,6 +1,6 @@
-/* -------------- */
-/* GLOBAL STYLING */
-/* -------------- */
+/* -------------------- */
+/* GLOBAL/MIXED STYLING */
+/* -------------------- */
 
 @font-face {
     font-family: 'Roboto';
@@ -13,6 +13,11 @@ body {
 
 ul {
     list-style: none;
+}
+
+header img,
+.dash-title img {
+    height: 5em; width: auto;
 }
 
 /* CONTAINER -------------------- */
@@ -55,10 +60,6 @@ ul {
     color: white;
 }
 
-header img {
-    height: 5em; width: auto;
-}
-
 /* HEADER2 -------------------- */
 .header2 {
     background-color: lightblue;
@@ -80,7 +81,7 @@ header img {
     color: white;
 }
 
-.nav h1 {
+.dash-title {
     display: none;
 }
 
@@ -235,6 +236,13 @@ header img {
     .nav {
         display: grid;
         grid-template: auto auto 1fr/ auto;
+    }
+
+    .dash-title {
+        display: contents;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .nav ul {
