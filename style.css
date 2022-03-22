@@ -326,7 +326,7 @@ nav span {
     /* NAVIGATION -------------------- */
     .nav {
         display: grid;
-        grid-template: auto auto 1fr/ auto;
+        grid-template: auto auto auto 1fr/ auto;
 
         position: sticky;
         top: var(--container-padding); left: var(--container-padding);
@@ -366,6 +366,10 @@ nav span {
 
     nav li {
         padding: var(--icn-gap) 0em var(--icn-gap) 0em;
+    }
+
+    .spacer {
+        height: calc(4 * var(--icn-gap));
     }
 
     .exp-coll{
