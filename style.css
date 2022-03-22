@@ -73,13 +73,13 @@ nav img,
     display: flex;
 }
 
+.profile-icon {
+    justify-content: flex-end;
+}
+
 .profile-icon img {
     border: 1px solid white;
     border-radius: 50%;
-}
-
-.linkdrop {
-    justify-content: flex-end;
 }
 
 .greeting {
