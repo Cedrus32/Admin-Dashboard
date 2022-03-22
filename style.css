@@ -41,6 +41,10 @@ nav img,
     filter: invert(1);
 }
 
+/* ------------------- */
+/* BASE DEVICE STYLING */
+/* ------------------- */
+
 /* CONTAINER -------------------- */
 .container {
     --container-padding: 1vh;
@@ -121,16 +125,33 @@ nav img,
     padding-bottom: 2em;
 }
 
+nav {
+    display: flex;
+}
+
 nav ul {
+    display: flex;
+    justify-content: center;
+    gap: space-evenly;
+    padding: 0em 2em 0em 2em;
+}
+
+ul.nav1  {
     display: grid;
-    grid-template: auto / repeat(10, 1fr);
+    grid-template: auto / repeat(6, 1fr);
+    justify-items: center;
+}
+
+ul.nav2 {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
     justify-items: center;
 }
 
 nav li {
     display: flex;
     gap: 1em;
-    width: inherit;
+    padding: 0em var(--icn-gap) 0em var(--icn-gap);
 }
 
 nav img {
@@ -139,6 +160,12 @@ nav img {
 
 nav span {
     display: none;
+}
+
+.spacer {
+    display: flex;
+    width: auto;
+    flex-grow: 1;
 }
 
 .exp-coll {
@@ -313,11 +340,30 @@ nav span {
         justify-content: center;
     }
 
+    nav {
+        flex-flow: column;
+    }
+
     nav ul {
+        flex-flow: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+    }
+
+    ul.nav1  {
         display: grid;
-        grid-template: repeat(10, 1fr) / auto;
-        justify-items: start;
-        gap: var(--icn-gap);
+        grid-template: repeat(6, 1fr) / auto;
+        justify-items: flex-start;
+    }
+
+    ul.nav2 {
+        display: grid;
+        grid-template: repeat(3, 1fr) / auto;
+        justify-items: flex-start;
+    }
+
+    nav li {
+        padding: var(--icn-gap) 0em var(--icn-gap) 0em;
     }
 
     .exp-coll{
