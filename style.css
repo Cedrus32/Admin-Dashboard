@@ -24,11 +24,6 @@ ul {
 /* MIXED STYLING */
 /* ------------- */
 
-header img,
-.dash-title img {
-    height: 5em; width: auto;
-}
-
 #expand,
 #collapse {
     height: 1.5em; width: auto;
@@ -80,6 +75,7 @@ nav img,
 .profile-icon img {
     border: 1px solid white;
     border-radius: 50%;
+    height: 5em; width: auto;
 }
 
 .greeting {
@@ -125,6 +121,10 @@ nav img,
 .dash-title {
     display: none;
     padding-bottom: 2em;
+}
+
+.dash-title img {
+    height: 3em; width: auto;
 }
 
 nav {
@@ -340,6 +340,7 @@ nav span {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: calc(3 * var(--icn-gap));
     }
 
     nav {
