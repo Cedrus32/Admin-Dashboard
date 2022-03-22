@@ -87,11 +87,13 @@ nav img,
     color: white;
 }
 
+.user {
+    font-size: 2em;
+}
+
 /* HEADER2 -------------------- */
 .header2 {
-    background-color: lightblue;
     grid-area: header2;
-
     display: grid;
     grid-template: auto / 1fr 1fr;
 }
