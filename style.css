@@ -131,11 +131,13 @@ nav {
     display: flex;
 }
 
+/* TODO dynamic gap between ul children -- min 0px, max 'space-evenly' */
+
 nav ul {
     display: flex;
     justify-content: center;
     gap: space-evenly;
-    padding: 0em 2em 0em 2em;
+    padding: 0em 1em 0em 1em;
 }
 
 ul.nav1  {
@@ -166,7 +168,7 @@ nav span {
 
 .spacer {
     display: flex;
-    width: auto;
+    width: 0px;
     flex-grow: 1;
 }
 
