@@ -77,7 +77,7 @@ nav img,
 }
 
 .linkdrop img {
-    height: 4em; width: auto;
+    height: 3em; width: auto;
 }
 
 .profile-icons {
@@ -129,6 +129,13 @@ nav img,
     flex-grow: 1;
 }
 
+.proj-manage img {
+    padding: 0.25em;
+    border: solid 1px black;
+    border-radius: 50%;
+    height: 1.75em; width: auto;
+}
+
 /* NAV -------------------- */
 .nav {
     grid-area: nav;
@@ -147,13 +154,10 @@ nav img,
 }
 
 nav {
-    display: flex;
-}
-
-nav ul {
-    display: flex;
+    display: grid;
+    grid-template: auto / 6fr auto 3fr;
     justify-content: center;
-    padding: 0em 1em 0em 1em;
+    align-items: center;
 }
 
 ul.nav1  {
@@ -166,12 +170,6 @@ ul.nav2 {
     display: grid;
     grid-template: auto / repeat(3, 1fr);
     justify-items: center;
-}
-
-nav li {
-    display: flex;
-    gap: 1em;
-    padding: 0em var(--icn-gap) 0em var(--icn-gap);
 }
 
 nav span {
@@ -316,6 +314,7 @@ nav span {
     .header1 {
         background-color: transparent;
         border-radius: 0px;
+        padding-top: 1.5em;
     }
 
     .header1 header {
@@ -345,6 +344,7 @@ nav span {
         height: calc(100vh - calc(2 * var(--container-padding)));
 
         border-radius: var(--ui-rad);
+        padding: 1.5em;
     }
 
     .dash-title {
@@ -356,13 +356,13 @@ nav span {
     }
 
     nav {
-        flex-flow: column;
+        grid-template: 6fr auto 3fr / auto;
+        justify-content: start;
     }
 
-    nav ul {
-        flex-flow: column;
-        justify-content: flex-start;
-        align-content: flex-start;
+    ul.nav1,
+    ul.nav2 {
+        gap: 1em;
     }
 
     ul.nav1  {
@@ -377,8 +377,8 @@ nav span {
         justify-items: flex-start;
     }
 
-    nav li {
-        padding: var(--icn-gap) 0em var(--icn-gap) 0em;
+    nav li img {
+        padding-right: var(--icn-gap);
     }
 
     .spacer {
