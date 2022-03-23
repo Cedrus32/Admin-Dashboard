@@ -24,6 +24,9 @@ ul {
 /* MIXED STYLING */
 /* ------------- */
 
+.header2 img,
+input#searchbar,
+nav img,
 #expand,
 #collapse {
     height: 1.5em; width: auto;
@@ -68,8 +71,14 @@ nav img,
     display: flex;
 }
 
+.linkdrop img {
+    height: 4em; width: auto;
+    align-self: center;
+}
+
 .profile-icon {
     justify-content: flex-end;
+    align-self: center;
 }
 
 .profile-icon img {
@@ -91,7 +100,7 @@ nav img,
 .header2 {
     grid-area: header2;
     display: grid;
-    grid-template: auto / 1fr 1fr;
+    grid-template: auto / 1fr auto;
 }
 
 .proj-manage {
@@ -103,6 +112,7 @@ nav img,
 .search {
     display: flex;
     gap: var(--icn-gap);
+    padding-right: 2em;
 }
 
 #searchbar {
@@ -131,8 +141,6 @@ nav {
     display: flex;
 }
 
-/* TODO dynamic gap between ul children -- min 0px, max 'space-evenly' */
-
 nav ul {
     display: flex;
     justify-content: center;
@@ -159,7 +167,7 @@ nav li {
 }
 
 nav img {
-    height: 1em; width: auto;
+    height: 1.5em; width: auto;
 }
 
 nav span {
