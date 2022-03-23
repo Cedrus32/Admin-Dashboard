@@ -5,8 +5,8 @@
 :root {
     --ui-rad: 30px;
     --icn-gap: 0.5em;
-    --profile-icn-height: 5em;
-    --nav-h2-icn0height: 1.5em;
+    --user-pic-height: 5em;
+    --nav-h2-icn-height: 1.5em;
 }
 
 @font-face {
@@ -31,10 +31,12 @@ input#searchbar,
 nav img,
 #expand,
 #collapse {
-    height: var(--nav-h2-icn0height); width: auto;
+    height: var(--nav-h2-icn-height); width: auto;
 }
 
 .linkdrop img,
+.alerts,
+.dash-title img,
 nav img,
 #expand,
 #collapse {
@@ -64,11 +66,11 @@ nav img,
 
 .header1 header {
     display: grid;
-    grid-template: auto / 1fr var(--profile-icn-height);
+    grid-template: auto / 1fr var(--user-pic-height);
     align-items: center;
 }
 
-.profile-icon,
+.profile-icons,
 .linkdrop,
 .greeting {
     display: flex;
@@ -78,14 +80,18 @@ nav img,
     height: 4em; width: auto;
 }
 
-.profile-icon {
+.profile-icons {
     justify-content: flex-end;
 }
 
-.profile-icon img {
+.alerts {
+    padding-right: 1em;
+}
+
+.user-pic {
     border: 1px solid white;
     border-radius: 50%;
-    height: var(--profile-icn-height); width: auto;
+    height: var(--user-pic-height); width: auto;
 }
 
 .greeting {
@@ -147,7 +153,6 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
-    gap: space-evenly;
     padding: 0em 1em 0em 1em;
 }
 
@@ -321,7 +326,11 @@ nav span {
         color: black;
     }
 
-    .profile-icon img {
+    .alerts {
+        filter: invert(0);
+    }
+
+    .user-pic {
         border: 1px solid black;
         border-radius: 50%;
     }
