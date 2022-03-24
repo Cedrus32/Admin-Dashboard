@@ -218,16 +218,27 @@ nav span {
 
 /* SECONDARY CONTENT -------------------- */
 .secondary-content {
-    background-color: plum;
     grid-area: secondary-content;
 
     display: grid;
-    grid-template: auto 1fr / auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'announce'
+                         'trend';
+    gap: 2em;
 }
 
 section {
     background-color: #F6F6F6;
     padding: var(--item-padding);
+    border-radius: var(--ui-rad);
+}
+
+.announce {
+    grid-area: announce;
+}
+
+.trend {
+    grid-area: trend;
 }
 
 /* FOOTER -------------------- */
@@ -253,11 +264,6 @@ section {
                              'primary-content'
                              'footer';
         gap: 10px;
-    }
-
-    /* SECONARY CONTENT -------------------- */
-    .secondary-content {
-        grid-template: auto / 1fr 1fr;
     }
 }
 
