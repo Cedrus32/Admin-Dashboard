@@ -7,6 +7,9 @@
     --icn-gap: 0.5em;
     --user-pic-height: 5em;
     --nav-h2-icn-height: 1.5em;
+
+    --item-padding: 1.5em;
+    --container-padding: 1vh;
 }
 
 @font-face {
@@ -52,7 +55,6 @@ nav img,
 
 /* CONTAINER -------------------- */
 .container {
-    --container-padding: 1vh;
     padding: var(--container-padding);
 }
 
@@ -114,6 +116,11 @@ nav img,
     grid-area: header2;
     display: grid;
     grid-template: auto / 1fr auto;
+}
+
+.proj-manage,
+.search {
+    align-items: center;
 }
 
 .proj-manage {
@@ -218,6 +225,11 @@ nav span {
     grid-template: auto 1fr / auto;
 }
 
+section {
+    background-color: #F6F6F6;
+    padding: var(--item-padding);
+}
+
 /* FOOTER -------------------- */
 .footer {
     background-color: peachpuff;
@@ -318,7 +330,7 @@ nav span {
     .header1 {
         background-color: transparent;
         border-radius: 0px;
-        padding-top: 1.5em;
+        padding-top: var(--item-padding);
     }
 
     .header1 header {
@@ -339,16 +351,18 @@ nav span {
     }
 
     /* NAVIGATION -------------------- */
+    /* todo set min height to stop when element cannot shrink without clipping*/
     .nav {
         display: grid;
         grid-template: auto auto auto 1fr/ auto;
 
         position: sticky;
         top: var(--container-padding); left: var(--container-padding);
-        height: calc(100vh - calc(2 * var(--container-padding)));
+        max-height: calc(100vh - calc(2 * var(--container-padding)));
+        min-height: auto;
 
         border-radius: var(--ui-rad);
-        padding: 1.5em;
+        padding: var(--item-padding);
     }
 
     .dash-title {
@@ -364,6 +378,7 @@ nav span {
         justify-content: start;
     }
 
+    /* todo make spacing dynamic like in mobile/tablet view? */
     ul.nav1,
     ul.nav2 {
         gap: 1em;
