@@ -26,8 +26,11 @@ ul {
 /* MIXED STYLING */
 /* ------------- */
 
+.alerts,
 .header2 img,
+.search img,
 input#searchbar,
+.proj-manage img,
 nav img,
 #expand,
 #collapse {
@@ -82,6 +85,7 @@ nav img,
 
 .profile-icons {
     justify-content: flex-end;
+    align-items: center;
 }
 
 .alerts {
@@ -382,7 +386,7 @@ nav span {
     }
 
     .spacer {
-        height: calc(4 * var(--icn-gap));
+        height: 2em;
     }
 
     .exp-coll{
