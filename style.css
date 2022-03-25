@@ -263,26 +263,23 @@ section {
     border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
 }
 
+.section-content {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+}
+
+.divider {
+    height: 1px; width: auto;
+    background-color: #bcbcbc;
+}
+
 .announce {
     grid-area: announce;
 }
 
 .announce .section-header {
     background-color: #A6D04D;
-}
-
-.trend {
-    grid-area: trend;
-}
-
-.trend .section-header {
-    background-color: #87D8F6;
-}
-
-.section-content {
-    display: flex;
-    flex-flow: column;
-    gap: 1rem;
 }
 
 .announce-card {
@@ -295,9 +292,29 @@ section {
     font-weight: bolder;
 }
 
-.divider {
-    height: 1px; width: auto;
-    background-color: #bcbcbc;
+.trend {
+    grid-area: trend;
+}
+
+.trend .section-header {
+    background-color: #87D8F6;
+}
+
+.trend-card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.trend-user-info {
+    display: flex;
+    flex-flow: column;
+}
+
+.trend-user-pic img {
+    height: 3rem; width: auto;
+    border: 1px solid black;
+    border-radius: 50%;
 }
 
 .vert-expand {
