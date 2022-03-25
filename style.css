@@ -275,6 +275,31 @@ section {
     grid-area: trend;
 }
 
+.trend .section-header {
+    background-color: #87D8F6;
+}
+
+.section-content {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+}
+
+.announce-card {
+    display: flex;
+    flex-flow: column;
+    gap: 0.25rem;
+}
+
+.announce-title h4 {
+    font-weight: bolder;
+}
+
+.divider {
+    height: 1px; width: auto;
+    background-color: #bcbcbc;
+}
+
 .vert-expand {
     display: none;
 }
