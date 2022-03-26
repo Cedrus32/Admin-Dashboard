@@ -429,11 +429,11 @@ section {
 @media only screen and (min-width: 1101px) {
     /* GRID LAYOUT -------------------- */
     :root {
-        --header1-height: 1fr;
-        --header2-height: 0.5fr;
+        --header1-height: max-content;
+        --header2-height: max-content;
         --content-height: 7fr;
 
-        --nav-width: 25%;
+        --nav-width: max-content;
         --primary-width: 7fr;
         --secondary-width: 3fr;
     }
@@ -495,7 +495,7 @@ section {
         position: sticky;
         top: var(--container-padding); left: var(--container-padding);
         max-height: calc(100vh - calc(2 * var(--container-padding)));
-        min-height: auto;
+        min-height: min-content;
 
         border-radius: var(--ui-rad);
         padding: var(--item-padding);
@@ -558,5 +558,6 @@ section {
         align-content: flex-start;
         justify-content: flex-start;
         margin-left: -0.5rem;
+        height: min-content;
     }
 }
