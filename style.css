@@ -494,6 +494,11 @@ section {
         justify-items: flex-start;
     }
 
+    .nav li {
+        display: flex;
+        align-items: center;
+    }
+
     nav li img {
         padding-right: var(--icn-gap);
     }
