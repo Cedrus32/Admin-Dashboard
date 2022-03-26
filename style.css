@@ -223,13 +223,19 @@ nav span {
 }
 
 main {
+    display: grid;
+    grid-template: auto auto / auto;
+    gap: var(--item-padding);
+    
     background-color: #F6F6F6;
+    padding: var(--item-padding);;
     border-radius: var(--ui-rad);
 }
 
 .primary-title {
     background-color: #E5C441;
 
+    margin: calc(-1 * var(--item-padding)) calc(-1 * var(--item-padding)) 0rem;
     padding: calc(0.75 * var(--item-padding)) calc(1.5 * var(--item-padding));
     border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
 }
@@ -238,10 +244,14 @@ main {
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 1rem;
 }
 
 .card {
     max-width: 1fr; height: 16rem;
+    border-left: 5px solid red;
+    border-radius: 5px 0px 0px 5px;
+    padding: 0.5rem;
 }
 
 /* SECONDARY CONTENT -------------------- */
@@ -260,7 +270,7 @@ main {
 section {
     display: grid;
     grid-template: auto auto / auto;
-    gap: 0.5rem;
+    gap: var(--item-padding);
 
     background-color: #F6F6F6;
     padding: var(--item-padding);
