@@ -15,17 +15,17 @@
 
 @font-face {
     font-family: 'Roboto-T';
-    src: url(./assets/Roboto-Thin.ttf);
+    src: url(./assets/fonts/Roboto-Thin.ttf);
 }
 
 @font-face {
     font-family: 'Roboto-L';
-    src: url(./assets/Roboto-Light.ttf);
+    src: url(./assets/fonts/Roboto-Light.ttf);
 }
 
 @font-face {
     font-family: 'Roboto-R';
-    src: url(./assets/Roboto-Regular.ttf);
+    src: url(./assets/fonts/Roboto-Regular.ttf);
 }
 
 body {
@@ -190,20 +190,10 @@ nav img,
     background-color: #3E1BBC;
     color: white;
     border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
-    margin: 0vh 1vh;
 }
 
 .dash-title {
     display: none;
-    padding-bottom: 2rem;
-}
-
-.dash-title img {
-    height: 3rem; width: auto;
-}
-
-.dash-title {
-    font-size: 2.5rem;
 }
 
 nav {
@@ -499,7 +489,8 @@ section {
     /* todo set min height to stop when element cannot shrink without clipping*/
     .nav {
         display: grid;
-        grid-template: auto auto auto 1fr/ auto;
+        grid-template: auto auto auto 1fr/ 1fr;
+        justify-content: start;
 
         position: sticky;
         top: var(--container-padding); left: var(--container-padding);
@@ -508,14 +499,22 @@ section {
 
         border-radius: var(--ui-rad);
         padding: var(--item-padding);
+        margin: 0vh 1vh;
     }
 
     .dash-title {
         display: contents;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-items: center;
         gap: calc(3 * var(--icn-gap));
+
+        padding-bottom: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .dash-title img {
+        height: 3rem; width: auto;
     }
 
     nav {
