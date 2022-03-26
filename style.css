@@ -99,7 +99,7 @@ nav img,
 .header1 {
     grid-area: header1;
     background-color: #3E1BBC;
-    border-radius: var(--ui-rad);
+    border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
 }
 
 .header1 header {
@@ -190,6 +190,7 @@ nav img,
     background-color: #3E1BBC;
     color: white;
     border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
+    margin-top: -10px;
 }
 
 .dash-title {
