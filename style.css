@@ -10,15 +10,27 @@
 
     --item-padding: 1.5rem;
     --container-padding: 1vh;
+    --element-header-font-size: 1.12rem;
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'Roboto-T';
+    src: url(./assets/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-L';
     src: url(./assets/Roboto-Light.ttf);
 }
 
+@font-face {
+    font-family: 'Roboto-R';
+    src: url(./assets/Roboto-Regular.ttf);
+}
+
 body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-family: 'Roboto-L', Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
 }
 
 ul {
@@ -126,6 +138,10 @@ nav img,
     color: white;
 }
 
+.say-hi {
+    font-size: 1.5rem;
+}
+
 .user {
     font-size: 2rem;
 }
@@ -186,6 +202,10 @@ nav img,
     height: 3rem; width: auto;
 }
 
+.dash-title {
+    font-size: 2.5rem;
+}
+
 nav {
     display: grid;
     grid-template: auto / 6fr auto 3fr;
@@ -208,6 +228,7 @@ ul.nav2 {
 
 nav span {
     display: none;
+    font-size: 1.12rem;
 }
 
 .exp-coll {
@@ -237,6 +258,9 @@ main {
     margin: calc(-1 * var(--item-padding)) calc(-1 * var(--item-padding)) 0rem;
     padding: calc(0.75 * var(--item-padding)) calc(1.5 * var(--item-padding));
     border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
+    font-size: var(--element-header-font-size);
+    font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
 
 .proj-cards {
@@ -252,11 +276,16 @@ main {
     gap: 1rem;
 
     padding: 0.5rem;
-    max-width: 1fr; height: 16rem;
+    max-width: 1fr; height: 14rem;
     border-left: 5px solid #E5C441;
     border-radius: 5px 15px 15px 5px;
 
     background-color: white;
+}
+
+.project-title h4 {
+    font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
 
 .project-icns {
@@ -294,6 +323,9 @@ section {
     margin: calc(-1 * var(--item-padding)) calc(-1 * var(--item-padding)) 0rem;
     padding: calc(var(--item-padding) / 2) var(--item-padding);
     border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
+    font-size: var(--element-header-font-size);
+    font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
 
 .section-content {
@@ -322,7 +354,8 @@ section {
 }
 
 .announce-title h4 {
-    font-weight: bolder;
+    font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .trend {
@@ -331,6 +364,10 @@ section {
 
 .trend .section-header {
     background-color: #87D8F6;
+}
+
+.trend .section-content {
+    min-width: max-content;
 }
 
 .trend-card {
@@ -359,7 +396,7 @@ section {
 /* -------------- */
 
 /* MOBILE -------------------- */
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 574px) {
     /* GRID LAYOUT -------------------- */
     .container {
         display: grid;
@@ -374,7 +411,7 @@ section {
 }
 
 /* TABLET -------------------- */
-@media only screen and (min-width: 551px) and (max-width: 1100px) {
+@media only screen and (min-width: 575px) and (max-width: 1100px) {
     /* GRID LAYOUT -------------------- */
     :root {
         --header1-height: 2fr;

@@ -27,22 +27,6 @@ main {
     display: block;
 }
 
-/* correct font size, margin on `h1` elements */
-/* within `section` and `article` contexts */
-/* in Chrome, Firefox, and Safari */
-
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-
-/* standardize margins for `header` elements across broswers */
-
-h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-}
-
 /* standardize margins for `p` elements across browsers */
 
 p {
