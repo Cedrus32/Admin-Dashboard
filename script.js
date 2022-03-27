@@ -1,4 +1,4 @@
-// function
+// functions
 
 function hideToggle(item1, item2) {
     let itemHide = item1.classList.contains('hide');
@@ -21,16 +21,19 @@ function radiusToggle(item1, item2) {
 }
 
 function switchIcon(target) {
+    let sectionParent = target.parentElement.parentElement.parentElement;
+    let sectionContent = sectionParent.children[1];
+    console.log(sectionParent);
+    console.log(sectionContent);
+
     if (target.classList.contains('vert-exp') === true) {
         target.classList = 'vert-coll';
         target.src = './assets/icons/menu-up.svg';
-        // console.log('hide content')
-        
+        sectionContent.style.display = 'none';
     } else if (target.classList.contains('vert-coll') === true) {
         target.classList = 'vert-exp';
         target.src = './assets/icons/menu-down.svg';
-        // console.log('show content');
-
+        sectionContent.style.display = 'flex';
     }
 }
 
@@ -51,12 +54,10 @@ linkDrop.addEventListener('click', () => {
 
 let menuIcons = document.querySelectorAll('.menu-icns img');
 let sectionContent = document.querySelectorAll('.section-content');
-// console.log(menuIcons);
-// console.log(sectionContent);
 
 menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
-    // console.log(e);
     switchIcon(e.target);
 }));
+
 
 // nav links
