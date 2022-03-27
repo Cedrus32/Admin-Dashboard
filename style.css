@@ -99,7 +99,7 @@ nav img,
 .header1 {
     grid-area: header1;
     background-color: #3E1BBC;
-    border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
+    border-radius: var(--ui-rad);
 }
 
 .header1 header {
