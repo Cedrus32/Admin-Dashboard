@@ -29,10 +29,18 @@ function switchIcon(target) {
 }
 
 function sectionHideToggle(target, content) {
+    let parentSection = content.parentElement;
+    let sectionHeader = parentSection.children[0];
     if (target.classList.contains('vert-exp') === true) {
         content.style.display = 'flex';
+        parentSection.style.gap = 'var(--item-padding)';
+        parentSection.style.padding = 'var(--item-padding)';
+        sectionHeader.style.margin = 'calc(-1 * var(--item-padding)) calc(-1 * var(--item-padding)) 0rem';
     } else if (target.classList.contains('vert-coll') === true) {
         content.style.display = 'none';
+        parentSection.style.gap = '0px';
+        parentSection.style.padding = '0px';
+        sectionHeader.style.margin = '0px';
     }
 }
 
@@ -52,7 +60,6 @@ linkDrop.addEventListener('click', () => {
 // exp/coll secondary section content
 
 let menuIcons = document.querySelectorAll('.menu-icns img');
-let sectionContent = document.querySelectorAll('.section-content');
 
 menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
     let menuTarget = e.target;

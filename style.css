@@ -300,10 +300,10 @@ main {
 section {
     display: grid;
     grid-template: auto auto / auto;
-    gap: var(--item-padding);
+    gap: var(--item-padding); /***/
 
     background-color: #F6F6F6;
-    padding: var(--item-padding);
+    padding: var(--item-padding); /***/
     border-radius: var(--ui-rad);
 }
 
