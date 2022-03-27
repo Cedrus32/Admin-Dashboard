@@ -356,10 +356,11 @@ section {
 
 .trend .section-header {
     background-color: #87D8F6;
+    min-width: 15rem;
 }
 
 .trend .section-content {
-    min-width: max-content;
+    flex-shrink: 0;
 }
 
 .trend-card {
