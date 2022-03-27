@@ -1,13 +1,11 @@
 // functions
 
-function hideToggle(item1, item2) {
+function navHideToggle(item1, item2) {
     let itemHide = item1.classList.contains('hide');
     if (itemHide === false) {
         item2.classList.add('hide')
-        console.log(item2.classList);
     } else if (itemHide === true) {
         item2.classList.remove('hide');
-        console.log(item2.classList);
     }
 }
 
@@ -21,19 +19,20 @@ function radiusToggle(item1, item2) {
 }
 
 function switchIcon(target) {
-    let sectionParent = target.parentElement.parentElement.parentElement;
-    let sectionContent = sectionParent.children[1];
-    console.log(sectionParent);
-    console.log(sectionContent);
-
     if (target.classList.contains('vert-exp') === true) {
         target.classList = 'vert-coll';
         target.src = './assets/icons/menu-up.svg';
-        sectionContent.style.display = 'none';
     } else if (target.classList.contains('vert-coll') === true) {
         target.classList = 'vert-exp';
         target.src = './assets/icons/menu-down.svg';
-        sectionContent.style.display = 'flex';
+    }
+}
+
+function sectionHideToggle(target, content) {
+    if (target.classList.contains('vert-exp') === true) {
+        content.style.display = 'flex';
+    } else if (target.classList.contains('vert-coll') === true) {
+        content.style.display = 'none';
     }
 }
 
@@ -45,7 +44,7 @@ let header1 = document.querySelector('.header1');
 let nav = document.querySelector('div.container-item.nav');
 
 linkDrop.addEventListener('click', () => {
-    hideToggle(nav, nav);
+    navHideToggle(nav, nav);
     radiusToggle(nav, header1);
 });
 
@@ -56,7 +55,12 @@ let menuIcons = document.querySelectorAll('.menu-icns img');
 let sectionContent = document.querySelectorAll('.section-content');
 
 menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
-    switchIcon(e.target);
+    let menuTarget = e.target;
+    let sectionContent = menuTarget.parentElement.parentElement.parentElement.children[1];
+    console.log(sectionContent);
+    switchIcon(menuTarget);
+    sectionHideToggle(menuTarget, sectionContent);
+    // radiusToggle(e.target);
 }));
 
 
