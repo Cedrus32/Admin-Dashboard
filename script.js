@@ -2,30 +2,34 @@
 // NAV HIDE/SHOW //
 // ------------- //
 
-function navHideToggle(item, hide) {
-    if (hide === false) {
-        item.classList.add('hide')
-    } else if (hide === true) {
-        item.classList.remove('hide');
+function navHideToggle(item1, item2, show) {
+    if (show === false) {
+        item1.classList.add('transition');
+        item1.classList.add('show');
+        item2.classList.add('transition');
+        item2.classList.add('flat-bottom');
+    } else if (show === true) {
+        item1.classList.remove('show');
+        item2.classList.remove('flat-bottom');
     }
 }
 
-function headerRadToggle(item2, hide) {
-    if (hide === false) {
-        item2.style.borderRadius = 'var(--ui-rad)';
-    } else if (hide === true) {
-        item2.style.borderRadius = 'var(--ui-rad) var(--ui-rad) 0px 0px';
-    }
-}
+// function headerRadToggle(item2, show) {
+//     if (show === false) {
+        
+//     } else if (show === true) {
+//         item2.style.borderRadius = 'var(--ui-rad)';
+//     }
+// }
 
 let linkDrop = document.querySelector('.linkdrop img');
 let header1 = document.querySelector('.header1');
 let nav = document.querySelector('div.container-item.nav');
 
 linkDrop.addEventListener('click', () => {
-    let navHide = nav.classList.contains('hide');
-    navHideToggle(nav, navHide);
-    headerRadToggle(header1, navHide);
+    let navShow = nav.classList.contains('show');
+    navHideToggle(nav, header1, navShow);
+    // headerRadToggle(header1, navHide);
 });
 
 // ------------------------- //
