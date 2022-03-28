@@ -43,6 +43,11 @@ h1, h2, h3, h4 {
     margin: 0px; padding: 0px;
 }
 
+a {
+    text-decoration: none;
+    padding: 0px; margin: 0px;
+}
+
 .hide {
     display: none;
 }
@@ -453,6 +458,10 @@ section {
         gap: 10px;
     }
 
+    a {
+        color: white;
+    }
+
     /* SHOW/HIDE -------------------- */
     .nav h1,
     .exp-coll,
@@ -546,6 +555,11 @@ section {
     }
 
     .nav li {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav a {
         display: flex;
         align-items: center;
     }
