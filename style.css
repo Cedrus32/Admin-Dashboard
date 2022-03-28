@@ -192,6 +192,9 @@ nav img,
 }
 
 /* NAV -------------------- */
+
+/* todo fix nav height -- shrinks to <100vh when other content minimized */
+
 .nav {
     grid-area: nav;
     background-color: #3E1BBC;
