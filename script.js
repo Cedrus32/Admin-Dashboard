@@ -28,12 +28,11 @@ linkDrop.addEventListener('click', () => {
     headerRadToggle(header1, navHide);
 });
 
-
 // ------------------------- //
 // SECTION CONTENT HIDE/SHOW //
 // ------------------------- //
 
-function switchIcon(target) {
+function switchHeaderIcon(target) {
     if (target.classList.contains('vert-exp') === true) {
         target.classList = 'vert-coll';
         target.src = './assets/icons/menu-up.svg';
@@ -76,10 +75,7 @@ let menuIcons = document.querySelectorAll('.menu-icns img');
 
 menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
     let menuTarget = e.target;
-    switchIcon(menuTarget);
+    switchHeaderIcon(menuTarget);
     sectionHideToggle(menuTarget);
     sectionRadiusToggle(e.target);
 }));
-
-
-// nav links

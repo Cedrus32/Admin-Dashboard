@@ -494,7 +494,7 @@ section {
     /* todo set min height to stop when element cannot shrink without clipping*/
     .nav {
         display: grid;
-        grid-template: auto auto auto 1fr/ 1fr;
+        grid-template: auto 1fr / 1fr;
         justify-content: start;
 
         position: sticky;
