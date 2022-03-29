@@ -326,6 +326,9 @@ nav img,
             background-color: #F6F6F6;
             padding: var(--item-padding); /***/
             border-radius: var(--ui-rad);
+
+            /* transition */
+            padding-bottom: 0px;
         }
 
         .announce {
@@ -364,6 +367,9 @@ nav img,
                 display: flex;
                 flex-flow: column;
                 gap: 1rem;
+                
+                /* transition */
+                display: none;
             }
 
                 .announce-card {
@@ -372,10 +378,10 @@ nav img,
                     gap: 0.25rem;
                 }
 
-                .divider {
-                    height: 1px; width: auto;
-                    background-color: #bcbcbc;
-                }
+                    .divider {
+                        height: 1px; width: auto;
+                        background-color: #bcbcbc;
+                    }
 
                 .trend-card {
                     display: flex;
@@ -449,7 +455,7 @@ nav img,
     :root {
         --header1-height: max-content;
         --header2-height: max-content;
-        --content-height: 7fr;
+        --content-height: 1fr;
 
         --nav-width: max-content;
         --primary-width: 7fr;
@@ -516,7 +522,8 @@ nav img,
 
         position: sticky;
         top: var(--container-padding); left: var(--container-padding);
-        max-height: calc(100vh - calc(2 * var(--container-padding)));
+        /* max-height: calc(100vh - calc(2 * var(--container-padding))); */
+        height: calc(100vh - calc(2 * var(--container-padding)));
         min-height: min-content;
 
         border-radius: var(--ui-rad);
@@ -575,7 +582,21 @@ nav img,
                             padding-right: var(--icn-gap);
                         }
 
-                .spacer {
+                nav .spacer {
                     height: 2rem;
                 }
+
+    /* PRIMARY CONTENT -------------------- */
+    .primary-content {
+        grid-template: 1fr / auto;
+        margin-bottom: -10px;
+    }
+
+        main {
+            grid-template: max-content max-content 1fr / auto;
+        }
+
+            main .spacer {
+                align-self: end;
+            }
 }
