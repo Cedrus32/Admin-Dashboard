@@ -3,13 +3,13 @@
 // ------------- //
 
 function navHideToggle(item) {
-    let navShow = nav.classList.contains('show');
+    let navShow = nav.classList.contains('show-nav');
     if (navShow === true) {
-        item.classList.remove('show');
-        item.classList.add('hide');
+        item.classList.remove('show-nav');
+        item.classList.add('hide-nav');
     } else if (navShow === false) {
-        item.classList.remove('hide');
-        item.classList.add('show');
+        item.classList.remove('hide-nav');
+        item.classList.add('show-nav');
     }
 }
 

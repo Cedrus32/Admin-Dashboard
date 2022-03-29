@@ -48,14 +48,6 @@ a {
     padding: 0px; margin: 0px;
 }
 
-/* .hide {
-    opacity: 0;
-}
-
-.show {
-    opacity: 1;
-} */
-
 /* ------------- */
 /* MIXED STYLING */
 /* ------------- */
@@ -234,7 +226,7 @@ nav img,
                     font-size: 1.12rem;
                 }
 
-.hide {
+.hide-nav {
     /* transition */
     padding-top: 0px;
     -webkit-transition: all 0.15s ease-in;
@@ -244,7 +236,7 @@ nav img,
     transition: all 0.15s ease-in;
 }
 
-.show {
+.show-nav {
     /* transition */
     padding-top: 58px;
     -webkit-transition: all 0.15s ease-in;
@@ -323,7 +315,7 @@ nav img,
         grid-template-rows: auto;
         grid-template-areas: 'announce'
                             'trend';
-        gap: calc(2 * var(--container-padding));
+        gap: calc(4 * var(--container-padding));
     }
 
         section {
@@ -552,7 +544,6 @@ nav img,
                 justify-content: start;
             }
 
-                /* todo make spacing dynamic like in mobile/tablet view? */
                 ul.nav1,
                 ul.nav2 {
                     gap: 1rem;
