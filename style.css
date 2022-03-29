@@ -202,10 +202,12 @@ nav img,
     background-color: #3E1BBC;
     color: white;
     border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
-    margin-top: -10px;
+    margin-top: -58px;
     margin-bottom: 10px;
+    z-index: -1;
 
-    opacity: 0;
+    /* transition */
+    padding-top: 0px;
 }
 
     .dash-title {
@@ -217,7 +219,6 @@ nav img,
             grid-template: auto / 6fr auto 3fr;
             justify-content: center;
             align-items: center;
-
         }
 
             ul.nav1  {
@@ -237,12 +238,9 @@ nav img,
                     font-size: 1.12rem;
                 }
 
-.flat-bottom {
-    border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
-}
-
 .show {
-    opacity: 1;
+    /* transition */
+    padding-top: 58px;
 }
 
 .transition {

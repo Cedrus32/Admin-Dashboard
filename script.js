@@ -2,34 +2,21 @@
 // NAV HIDE/SHOW //
 // ------------- //
 
-function navHideToggle(item1, item2, show) {
+function navHideToggle(item, show) {
     if (show === false) {
-        item1.classList.add('transition');
-        item1.classList.add('show');
-        item2.classList.add('transition');
-        item2.classList.add('flat-bottom');
+        item.classList.add('transition');
+        item.classList.add('show');
     } else if (show === true) {
-        item1.classList.remove('show');
-        item2.classList.remove('flat-bottom');
+        item.classList.remove('show');
     }
 }
 
-// function headerRadToggle(item2, show) {
-//     if (show === false) {
-        
-//     } else if (show === true) {
-//         item2.style.borderRadius = 'var(--ui-rad)';
-//     }
-// }
-
 let linkDrop = document.querySelector('.linkdrop img');
-let header1 = document.querySelector('.header1');
 let nav = document.querySelector('div.container-item.nav');
 
 linkDrop.addEventListener('click', () => {
     let navShow = nav.classList.contains('show');
-    navHideToggle(nav, header1, navShow);
-    // headerRadToggle(header1, navHide);
+    navHideToggle(nav, navShow);
 });
 
 // ------------------------- //
