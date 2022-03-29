@@ -321,14 +321,22 @@ nav img,
         section {
             display: grid;
             grid-template: auto auto / auto;
-            gap: var(--item-padding); /***/
+
+            /***********************/
+            /* gap: var(--item-padding); */
+            /***********************/
 
             background-color: #F6F6F6;
-            padding: var(--item-padding); /***/
+
+            /***************************/
+            /* padding: var(--item-padding); */
+            /***************************/
+
             border-radius: var(--ui-rad);
 
             /* transition */
-            padding-bottom: 0px;
+            gap: var(--item-padding);
+            padding: var(--item-padding);
         }
 
         .announce {
@@ -343,8 +351,11 @@ nav img,
                 display: flex;
                 align-items: center;
                 gap: var(--icn-gap);
-                
-                margin: calc(-1 * var(--item-padding)) calc(-1 * var(--item-padding)) 0rem; /***/
+
+                /*************************************************************************/
+                /* margin: calc(-1 * var(--item-padding)) calc(-1 * var(--item-padding)) 0rem; */
+                /*************************************************************************/
+
                 padding: calc(var(--item-padding) / 1.75) var(--item-padding);
                 border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
                 height: var(--header-height);
@@ -352,6 +363,9 @@ nav img,
                 font-size: var(--element-header-font-size);
                 font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
                 font-weight: bolder;
+
+                /* transition */
+                margin: calc(-1 * var(--item-padding)) calc(-1 * var(--item-padding)) 0rem;
             }
 
             .announce .section-header {
@@ -364,12 +378,13 @@ nav img,
             }
 
             .section-content {
-                display: flex;
+                /* display: flex; */
                 flex-flow: column;
                 gap: 1rem;
                 
                 /* transition */
-                display: none;
+                display: flex;
+                height: initial;
             }
 
                 .announce-card {
@@ -403,6 +418,70 @@ nav img,
                             display: flex;
                             flex-flow: column;
                         }
+
+    .hide-section {
+        /* transition */
+        gap: 0px;
+        padding: 0px;
+        -webkit-transition: all 0.15s ease-in;
+        -moz-transition: all 0.15s ease-in;
+        -o-transition: all 0.15s ease-in;
+        -ms-transition: all 0.15s ease-in;
+        transition: all 0.15s ease-in;
+    }
+
+    .hide-header {
+        /* transition */
+        margin: 0px;
+        -webkit-transition: all 0.15s ease-in;
+        -moz-transition: all 0.15s ease-in;
+        -o-transition: all 0.15s ease-in;
+        -ms-transition: all 0.15s ease-in;
+        transition: all 0.15s ease-in;
+    }
+
+    .hide-content {
+        /* transition */
+        display: none;
+        height: 0px;
+        -webkit-transition: all 0.15s ease-in;
+        -moz-transition: all 0.15s ease-in;
+        -o-transition: all 0.15s ease-in;
+        -ms-transition: all 0.15s ease-in;
+        transition: all 0.15s ease-in;
+    }
+
+    .show-section {
+        /* transition */
+        gap: var(--item-padding);
+        padding: var(--item-padding);
+        -webkit-transition: all 0.15s ease-in;
+        -moz-transition: all 0.15s ease-in;
+        -o-transition: all 0.15s ease-in;
+        -ms-transition: all 0.15s ease-in;
+        transition: all 0.15s ease-in;
+    }
+
+    .show-header {
+        /* transition */
+        margin: calc(-1 * var(--item-padding)) calc(-1 * var(--item-padding)) 0rem;
+        -webkit-transition: all 0.15s ease-in;
+        -moz-transition: all 0.15s ease-in;
+        -o-transition: all 0.15s ease-in;
+        -ms-transition: all 0.15s ease-in;
+        transition: all 0.15s ease-in;
+    }
+
+    .show-content {
+        /* transition */
+        display: flex;
+        height: initial;
+        -webkit-transition: all 0.15s ease-in;
+        -moz-transition: all 0.15s ease-in;
+        -o-transition: all 0.15s ease-in;
+        -ms-transition: all 0.15s ease-in;
+        transition: all 0.15s ease-in;
+    }
 
 
 /* -------------- */
