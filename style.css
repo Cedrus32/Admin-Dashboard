@@ -203,7 +203,7 @@ nav img,
     z-index: -1;
 
     /* transition */
-    padding-top: 0px;
+    padding-top: 58px;
 }
 
     .dash-title {
@@ -234,12 +234,19 @@ nav img,
                     font-size: 1.12rem;
                 }
 
+.hide {
+    /* transition */
+    padding-top: 0px;
+    -webkit-transition: all 0.15s ease-in;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    -ms-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+}
+
 .show {
     /* transition */
     padding-top: 58px;
-}
-
-.transition {
     -webkit-transition: all 0.15s ease-in;
     -moz-transition: all 0.15s ease-in;
     -o-transition: all 0.15s ease-in;

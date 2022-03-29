@@ -2,12 +2,14 @@
 // NAV HIDE/SHOW //
 // ------------- //
 
-function navHideToggle(item, show) {
-    if (show === false) {
-        item.classList.add('transition');
-        item.classList.add('show');
-    } else if (show === true) {
+function navHideToggle(item) {
+    let navShow = nav.classList.contains('show');
+    if (navShow === true) {
         item.classList.remove('show');
+        item.classList.add('hide');
+    } else if (navShow === false) {
+        item.classList.remove('hide');
+        item.classList.add('show');
     }
 }
 
@@ -15,8 +17,7 @@ let linkDrop = document.querySelector('.linkdrop img');
 let nav = document.querySelector('div.container-item.nav');
 
 linkDrop.addEventListener('click', () => {
-    let navShow = nav.classList.contains('show');
-    navHideToggle(nav, navShow);
+    navHideToggle(nav);
 });
 
 // ------------------------- //
