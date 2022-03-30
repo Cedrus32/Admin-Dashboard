@@ -36,11 +36,8 @@ function switchHeaderIcon(target) {
 
 function sectionHideToggle(target) {
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
-    // console.log(sectionContent);
     let parentSection = sectionContent.parentElement;
-    // console.log(parentSection);
     let sectionHeader = parentSection.children[0];
-    // console.log(sectionHeader);
     if (target.classList.contains('vert-exp') === true) {
         parentSection.classList.remove('hide-section');
         sectionHeader.classList.remove('hide-header');
@@ -48,11 +45,6 @@ function sectionHideToggle(target) {
         parentSection.classList.add('show-section');
         sectionHeader.classList.add('show-header');
         sectionContent.classList.add('show-content');
-        // sectionContent.style.display = 'flex';
-        // sectionContent.style.height = 'initial';
-        // parentSection.style.gap = 'var(--item-padding)';
-        // parentSection.style.padding = 'var(--item-padding)';
-        // sectionHeader.style.margin = 'calc(-1 * var(--item-padding)) calc(-1 * var(--item-padding)) 0rem';
     } else if (target.classList.contains('vert-coll') === true) {
         parentSection.classList.remove('show-section');
         sectionHeader.classList.remove('show-header');
@@ -60,25 +52,8 @@ function sectionHideToggle(target) {
         parentSection.classList.add('hide-section');
         sectionHeader.classList.add('hide-header');
         sectionContent.classList.add('hide-content');
-        // sectionContent.style.display = 'none';
-        // sectionContent.style.height = '0px';
-        // parentSection.style.gap = '0px';
-        // parentSection.style.padding = '0px';
-        // sectionHeader.style.margin = '0px';
     }
 }
-
-// function sectionRadiusToggle(target) {
-//     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
-//     let parentSection = sectionContent.parentElement;
-//     let sectionHeader = parentSection.children[0];
-    
-//     if (target.classList.contains('vert-exp') === true) {
-//         sectionHeader.style.borderRadius = 'var(--ui-rad) var(--ui-rad) 0px 0px';
-//     } else if (target.classList.contains('vert-coll') === true) {
-//         sectionHeader.style.borderRadius = '30px';
-//     }
-// };
 
 let menuIcons = document.querySelectorAll('.menu-icns img');
 
@@ -86,5 +61,4 @@ menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
     let menuTarget = e.target;
     switchHeaderIcon(menuTarget);
     sectionHideToggle(menuTarget);
-    // sectionRadiusToggle(e.target);
 }));

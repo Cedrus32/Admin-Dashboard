@@ -308,6 +308,8 @@ nav img,
 /* SECONDARY CONTENT -------------------- */
 .secondary-content {
     grid-area: secondary-content;
+
+    --secondary-trans: all 1s ease-in;
 }
 
     .secondary-container {
@@ -423,64 +425,64 @@ nav img,
         /* transition */
         gap: 0px;
         padding: 0px;
-        -webkit-transition: all 0.15s ease-in;
-        -moz-transition: all 0.15s ease-in;
-        -o-transition: all 0.15s ease-in;
-        -ms-transition: all 0.15s ease-in;
-        transition: all 0.15s ease-in;
+        -webkit-transition: var(--secondary-trans);
+        -moz-transition: var(--secondary-trans);
+        -o-transition: var(--secondary-trans);
+        -ms-transition: var(--secondary-trans);
+        transition: var(--secondary-trans);
     }
 
     .hide-header {
         /* transition */
         margin: 0px;
-        -webkit-transition: all 0.15s ease-in;
-        -moz-transition: all 0.15s ease-in;
-        -o-transition: all 0.15s ease-in;
-        -ms-transition: all 0.15s ease-in;
-        transition: all 0.15s ease-in;
+        -webkit-transition: var(--secondary-trans);
+        -moz-transition: var(--secondary-trans);
+        -o-transition: var(--secondary-trans);
+        -ms-transition: var(--secondary-trans);
+        transition: var(--secondary-trans);
     }
 
     .hide-content {
         /* transition */
         display: none;
         height: 0px;
-        -webkit-transition: all 0.15s ease-in;
-        -moz-transition: all 0.15s ease-in;
-        -o-transition: all 0.15s ease-in;
-        -ms-transition: all 0.15s ease-in;
-        transition: all 0.15s ease-in;
+        -webkit-transition: var(--secondary-trans);
+        -moz-transition: var(--secondary-trans);
+        -o-transition: var(--secondary-trans);
+        -ms-transition: var(--secondary-trans);
+        transition: var(--secondary-trans);
     }
 
     .show-section {
         /* transition */
         gap: var(--item-padding);
         padding: var(--item-padding);
-        -webkit-transition: all 0.15s ease-in;
-        -moz-transition: all 0.15s ease-in;
-        -o-transition: all 0.15s ease-in;
-        -ms-transition: all 0.15s ease-in;
-        transition: all 0.15s ease-in;
+        -webkit-transition: var(--secondary-trans);
+        -moz-transition: var(--secondary-trans);
+        -o-transition: var(--secondary-trans);
+        -ms-transition: var(--secondary-trans);
+        transition: var(--secondary-trans);
     }
 
     .show-header {
         /* transition */
         margin: calc(-1 * var(--item-padding)) calc(-1 * var(--item-padding)) 0rem;
-        -webkit-transition: all 0.15s ease-in;
-        -moz-transition: all 0.15s ease-in;
-        -o-transition: all 0.15s ease-in;
-        -ms-transition: all 0.15s ease-in;
-        transition: all 0.15s ease-in;
+        -webkit-transition: var(--secondary-trans);
+        -moz-transition: var(--secondary-trans);
+        -o-transition: var(--secondary-trans);
+        -ms-transition: var(--secondary-trans);
+        transition: var(--secondary-trans);
     }
 
     .show-content {
         /* transition */
         display: flex;
         height: initial;
-        -webkit-transition: all 0.15s ease-in;
-        -moz-transition: all 0.15s ease-in;
-        -o-transition: all 0.15s ease-in;
-        -ms-transition: all 0.15s ease-in;
-        transition: all 0.15s ease-in;
+        -webkit-transition: var(--secondary-trans);
+        -moz-transition: var(--secondary-trans);
+        -o-transition: var(--secondary-trans);
+        -ms-transition: var(--secondary-trans);
+        transition: var(--secondary-trans);
     }
 
 
