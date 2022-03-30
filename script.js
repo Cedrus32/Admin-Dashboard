@@ -36,21 +36,11 @@ function switchHeaderIcon(target) {
 
 function sectionHideToggle(target) {
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
-    let parentSection = sectionContent.parentElement;
-    let sectionHeader = parentSection.children[0];
     if (target.classList.contains('vert-exp') === true) {
-        parentSection.classList.remove('hide-section');
-        sectionHeader.classList.remove('hide-header');
         sectionContent.classList.remove('hide-content');
-        parentSection.classList.add('show-section');
-        sectionHeader.classList.add('show-header');
         sectionContent.classList.add('show-content');
     } else if (target.classList.contains('vert-coll') === true) {
-        parentSection.classList.remove('show-section');
-        sectionHeader.classList.remove('show-header');
         sectionContent.classList.remove('show-content');
-        parentSection.classList.add('hide-section');
-        sectionHeader.classList.add('hide-header');
         sectionContent.classList.add('hide-content');
     }
 }
