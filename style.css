@@ -367,8 +367,14 @@ nav img,
                 background-color: #F6F6F6;
                 
                 /* transition */
-                /* height: auto; */
+                min-height: max-content;
+                height: auto;
                 /* clip: rect(auto, auto, auto, auto); */
+                -webkit-transition: all 1s ease-in;
+                -moz-transition: all 1s ease-in;
+                -o-transition: all 1s ease-in;
+                -ms-transition: all 1s ease-in;
+                transition: all 1s ease-in;
             }
 
                 .header-buff {
@@ -443,7 +449,7 @@ nav img,
     -o-transition: all 1s ease-in;
     -ms-transition: all 1s ease-in;
     transition: all 1s ease-in;
-}     
+}
 
 
 /* -------------- */
