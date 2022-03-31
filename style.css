@@ -431,7 +431,7 @@ nav img,
 
 .hide-content {
     /* transition */
-    /* height: 1px; */
+    height: 1px;
     /* clip: rect(1px, 1px, 1px, 1px); */
     -webkit-transition: all 1s ease-in;
     -moz-transition: all 1s ease-in;
@@ -450,6 +450,10 @@ nav img,
     -ms-transition: all 1s ease-in;
     transition: all 1s ease-in;
 }
+
+/* .auto-height {
+    height: auto;
+} */
 
 
 /* -------------- */

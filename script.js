@@ -34,13 +34,20 @@ function switchHeaderIcon(target) {
     }
 }
 
+function setInitHeight(target) {
+    let sectionContent = target.parentElement.parentElement.parentElement.children[1];
+    let sectionHeight = sectionContent.clientHeight;
+    if (sectionHeight > 1) {
+        sectionContent.style.height = sectionHeight + 'px';
+    }
+}
+
 function getHeight(target) {
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
     let sectionHeight = sectionContent.clientHeight;
     console.log(sectionHeight); //* working */
     if (sectionHeight === 1) {
         let height = sectionContent.scrollHeight + 'px';
-        // console.log(height); //* working */
         return height;
     } else if (sectionHeight > 1) {
         let height = '1px';
@@ -50,19 +57,14 @@ function getHeight(target) {
 }
 
 function sectionHideToggle(target, sectionHeight) {
-    console.log(sectionHeight); //* working */
+    // console.log(sectionHeight); //* working */
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
     if (target.classList.contains('vert-exp') === true) {
-        // console.log(sectionHeight); //* working */
-        // sectionContent.classList.remove('hide-content');
-        // sectionContent.classList.add('show-content');
         sectionContent.style.height = sectionHeight;
+        // sectionContent.classList.add('auto-height');
     } else if (target.classList.contains('vert-coll') === true) {
-        console.log(sectionHeight); //* working */
-        // sectionContent.classList.remove('show-content');
-        // sectionContent.classList.add('hide-content');
         sectionContent.style.height = sectionHeight;
-        console.log(sectionContent.style.height);
+        // sectionContent.classList.remove('auto-height');
     }
 }
 
@@ -71,7 +73,7 @@ let menuIcons = document.querySelectorAll('.menu-icns img');
 menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
     let menuTarget = e.target;
     switchHeaderIcon(menuTarget);
+    setInitHeight(menuTarget);
     let height = getHeight(menuTarget);
-    console.log(height); //* working */
     sectionHideToggle(menuTarget, height);
 }));
