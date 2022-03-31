@@ -37,30 +37,32 @@ function switchHeaderIcon(target) {
 function getHeight(target) {
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
     let sectionHeight = sectionContent.clientHeight;
-    console.log(sectionHeight);
+    console.log(sectionHeight); //* working */
+    if (sectionHeight === 1) {
+        let height = sectionContent.scrollHeight + 'px';
+        // console.log(height); //* working */
+        return height;
+    } else if (sectionHeight > 1) {
+        let height = '1px';
+        console.log(height); //* working */
+        return height;
+    }
 }
 
-// function getHeight(section) {
-//     console.log(section);
-//     let height = section.clientHeight;
-//     console.log(height);
-//     if (height === 1) {
-//         let sectionHeight = "'" + height + "px'";
-//         return sectionHeight;
-//     } else if (height > 1) {
-//         let sectionHeight = "'1px'";
-//         return sectionHeight;
-//     }
-// }
-
-function sectionHideToggle(target) {
+function sectionHideToggle(target, sectionHeight) {
+    console.log(sectionHeight); //* working */
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
     if (target.classList.contains('vert-exp') === true) {
-        sectionContent.classList.remove('hide-content');
-        sectionContent.classList.add('show-content');
+        // console.log(sectionHeight); //* working */
+        // sectionContent.classList.remove('hide-content');
+        // sectionContent.classList.add('show-content');
+        sectionContent.style.height = sectionHeight;
     } else if (target.classList.contains('vert-coll') === true) {
-        sectionContent.classList.remove('show-content');
-        sectionContent.classList.add('hide-content');
+        console.log(sectionHeight); //* working */
+        // sectionContent.classList.remove('show-content');
+        // sectionContent.classList.add('hide-content');
+        sectionContent.style.height = sectionHeight;
+        console.log(sectionContent.style.height);
     }
 }
 
@@ -69,6 +71,7 @@ let menuIcons = document.querySelectorAll('.menu-icns img');
 menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
     let menuTarget = e.target;
     switchHeaderIcon(menuTarget);
-    getHeight(menuTarget);
-    sectionHideToggle(menuTarget);
+    let height = getHeight(menuTarget);
+    console.log(height); //* working */
+    sectionHideToggle(menuTarget, height);
 }));
