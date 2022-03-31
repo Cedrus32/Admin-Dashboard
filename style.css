@@ -320,18 +320,18 @@ nav img,
 
         section {
             display: grid;
-            grid-template: auto auto / auto;
+            grid-template: auto auto auto / auto;
             border-radius: var(--ui-rad);
+            /* margin-bottom: calc(-1 * var(--item-padding)); */
+            background-color: #F6F6F6;
         }
 
         .announce {
             grid-area: announce;
-            background-color: #A6D04D;
         }
 
         .trend {
             grid-area: trend;
-            background-color: #87D8F6;
         }
 
             .section-header {
@@ -360,16 +360,17 @@ nav img,
                 display: grid;
                 grid-template: auto auto / auto;
                 gap: var(--item-padding);
+                
                 position: relative;
                 top: calc(-1.15 * var(--item-padding));
                 overflow: hidden;
 
                 background-color: #F6F6F6;
+                opacity: 1;
                 
                 /* transition */
                 min-height: max-content;
                 height: auto;
-                /* clip: rect(auto, auto, auto, auto); */
                 -webkit-transition: all 1s ease-in;
                 -moz-transition: all 1s ease-in;
                 -o-transition: all 1s ease-in;
@@ -429,10 +430,24 @@ nav img,
                                 flex-flow: column;
                             }
 
+                .content-footer {
+                    height: calc(1.15 * var(--item-padding));
+                    border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
+                    margin-top: calc(-1.15 * calc(var(--item-padding)));
+                }
+
+                .announce .content-footer {
+                    background-color: #A6D04D;
+                }
+
+                .trend .content-footer {
+                    background-color: #87D8F6;
+                }
+
+
 .hide-content {
     /* transition */
     height: 1px;
-    /* clip: rect(1px, 1px, 1px, 1px); */
     -webkit-transition: all 1s ease-in;
     -moz-transition: all 1s ease-in;
     -o-transition: all 1s ease-in;
@@ -442,18 +457,12 @@ nav img,
 
 .show-content {
     /* transition */
-    /* height: auto; */
-    /* clip: rect(auto, auto, auto, auto); */
     -webkit-transition: all 1s ease-in;
     -moz-transition: all 1s ease-in;
     -o-transition: all 1s ease-in;
     -ms-transition: all 1s ease-in;
     transition: all 1s ease-in;
 }
-
-/* .auto-height {
-    height: auto;
-} */
 
 
 /* -------------- */

@@ -61,10 +61,10 @@ function sectionHideToggle(target, sectionHeight) {
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
     if (target.classList.contains('vert-exp') === true) {
         sectionContent.style.height = sectionHeight;
-        // sectionContent.classList.add('auto-height');
+        console.log("it's getting bigger");
     } else if (target.classList.contains('vert-coll') === true) {
         sectionContent.style.height = sectionHeight;
-        // sectionContent.classList.remove('auto-height');
+        console.log("it's getting smaller");
     }
 }
 
@@ -77,3 +77,9 @@ menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
     let height = getHeight(menuTarget);
     sectionHideToggle(menuTarget, height);
 }));
+
+
+////   background fill
+//todo relative transition speed
+//todo interrupted shrink
+//todo make whole header clickable
