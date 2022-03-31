@@ -34,6 +34,25 @@ function switchHeaderIcon(target) {
     }
 }
 
+function getHeight(target) {
+    let sectionContent = target.parentElement.parentElement.parentElement.children[1];
+    let sectionHeight = sectionContent.clientHeight;
+    console.log(sectionHeight);
+}
+
+// function getHeight(section) {
+//     console.log(section);
+//     let height = section.clientHeight;
+//     console.log(height);
+//     if (height === 1) {
+//         let sectionHeight = "'" + height + "px'";
+//         return sectionHeight;
+//     } else if (height > 1) {
+//         let sectionHeight = "'1px'";
+//         return sectionHeight;
+//     }
+// }
+
 function sectionHideToggle(target) {
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
     if (target.classList.contains('vert-exp') === true) {
@@ -50,5 +69,6 @@ let menuIcons = document.querySelectorAll('.menu-icns img');
 menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
     let menuTarget = e.target;
     switchHeaderIcon(menuTarget);
+    getHeight(menuTarget);
     sectionHideToggle(menuTarget);
 }));
