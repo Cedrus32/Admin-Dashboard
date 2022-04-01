@@ -190,12 +190,14 @@ nav img,
     background-color: #3E1BBC;
     color: white;
     border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
-    margin-top: -58px;
+    margin-top: calc(-1 * calc(var(--ui-rad) + 10px));
+    /* margin-top: -58px; */
     margin-bottom: 10px;
     z-index: -1;
 
     /* transition */
-    padding-top: 58px;
+    padding-top: calc(0.1 * var(--ui-rad));;
+    /* padding-top: 58px; */
 }
 
     .dash-title {

@@ -82,4 +82,3 @@ menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
 ////   background fill
 //todo relative transition speed
 //todo interrupted shrink
-//todo make whole header clickable
