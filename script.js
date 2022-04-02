@@ -43,27 +43,29 @@ function switchHeaderIcon(target) {
 
 function getHeight(target) {
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
-    let sectionHeight = sectionContent.clientHeight;
-    // console.log(sectionHeight); //* working */
-    if (sectionHeight === 1) {
-        let height = sectionContent.scrollHeight + 'px';
+    let displayedHeight = sectionContent.clientHeight;
+    let contentHeight = sectionContent.scrollHeight;
+    if (displayedHeight === 1) { // if fully collapsed...
+        let height = contentHeight + 'px';
         return height;
-    } else if (sectionHeight > 1) {
+    } else if (displayedHeight === contentHeight) { // if fully expanded...
         let height = '1px';
-        // console.log(height); //* working */
+        return height;
+    } else if ((displayedHeight < contentHeight) && (displayedHeight > 1)) { // if collapsING...
+        let height = contentHeight + 'px';
         return height;
     }
 }
 
-function sectionHideToggle(target, sectionHeight) {
-    // console.log(sectionHeight); //* working */
+function sectionHideToggle(target, height) {
+    // console.log(height); //* working */
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
     if (target.classList.contains('vert-exp') === true) {
-        sectionContent.style.height = sectionHeight;
+        sectionContent.style.height = height;
         // console.log("it's getting bigger");
         setTimeout(resetHeight, 200, sectionContent);
     } else if (target.classList.contains('vert-coll') === true) {
-        sectionContent.style.height = sectionHeight;
+        sectionContent.style.height = height;
         // console.log("it's getting smaller");
     }
 }
@@ -77,41 +79,6 @@ menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
     let menuTarget = e.target;
     setInitHeight(menuTarget);
     switchHeaderIcon(menuTarget);
-    let height = getHeight(menuTarget);
-    sectionHideToggle(menuTarget, height);
+    let sectionHeight = getHeight(menuTarget);
+    sectionHideToggle(menuTarget, sectionHeight);
 }));
-
-
-// ---------------------- //
-// GET TRANSITION LENGTHS //
-// ---------------------- //
-
-// function getTransLength(item) {
-//     let navHeight = parseInt(window.getComputedStyle(nav)['marginTop']) * -1;
-//     let length = (navHeight / 250) + 's';
-
-//     console.log(item);
-//     console.log(navHeight);
-//     console.log(length);
-
-//     if (item.classList.contains('nav')) {
-//         item.style.setProperty('--nav-seconds', length);
-//     } else {
-//         let parentSection = item.parentElement.parentElement.parentElement;
-//         let parentContent = parentSection.children[1];
-
-//         if (parentSection.classList.contains('announce')) {
-//             parentContent.style.setProperty('--announce-seconds', length);
-//         } else if (parentSection.classList.contains('trend')) {
-//             parentContent.style.setProperty('--trend-seconds', length);
-//         }
-//     }
-// }
-
-// getTransLength(nav);
-// menuIcons.forEach(icon => getTransLength(icon));
-
-
-////   background fill
-//todo relative transition speed
-//todo interrupted shrink

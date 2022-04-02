@@ -13,6 +13,8 @@
     --element-header-font-size: 1.12rem;
 
     --header-height: 3.75rem;
+
+    --trans-length: 0.2s;
 }
 
 @font-face {
@@ -186,8 +188,6 @@ nav img,
 /* NAV -------------------- */
 
 .nav {
-    --nav-seconds: 0.2s ;
-
     grid-area: nav;
     background-color: #3E1BBC;
     color: white;
@@ -228,21 +228,21 @@ nav img,
 .hide-nav {
     /* transition */
     padding-top: 0px;
-    -webkit-transition: all var(--nav-seconds) linear;
-    -moz-transition: all var(--nav-seconds) linear;
-    -o-transition: all var(--nav-seconds) linear;
-    -ms-transition: all var(--nav-seconds) linear;
-    transition: all var(--nav-seconds) linear;
+    -webkit-transition: all var(--trans-length) linear;
+    -moz-transition: all var(--trans-length) linear;
+    -o-transition: all var(--trans-length) linear;
+    -ms-transition: all var(--trans-length) linear;
+    transition: all var(--trans-length) linear;
 }
 
 .show-nav {
     /* transition */
     padding-top: calc(var(--ui-rad) + 20px);
-    -webkit-transition: all var(--nav-seconds) linear;
-    -moz-transition: all var(--nav-seconds) linear;
-    -o-transition: all var(--nav-seconds) linear;
-    -ms-transition: all var(--nav-seconds) linear;
-    transition: all var(--nav-seconds) linear;
+    -webkit-transition: all var(--trans-length) linear;
+    -moz-transition: all var(--trans-length) linear;
+    -o-transition: all var(--trans-length) linear;
+    -ms-transition: all var(--trans-length) linear;
+    transition: all var(--trans-length) linear;
 }
 
 /* PRIMARY CONTENT -------------------- */
@@ -318,9 +318,6 @@ nav img,
     }
 
         section {
-            --announce-seconds: 0.2s;
-            --trend-seconds: 0.2s;
-
             display: grid;
             grid-template: auto auto auto / auto;
             border-radius: var(--ui-rad);
@@ -375,19 +372,19 @@ nav img,
             }
 
             .announce .section-content {
-                -webkit-transition: all var(--announce-seconds) linear;
-                -moz-transition: all var(--announce-seconds) linear;
-                -o-transition: all var(--announce-seconds) linear;
-                -ms-transition: all var(--announce-seconds) linear;
-                transition: all var(--announce-seconds) linear;
+                -webkit-transition: all var(--trans-length) linear;
+                -moz-transition: all var(--trans-length) linear;
+                -o-transition: all var(--trans-length) linear;
+                -ms-transition: all var(--trans-length) linear;
+                transition: all var(--trans-length) linear;
             }
 
             .trend .section-content {
-                -webkit-transition: all var(--trend-seconds) linear;
-                -moz-transition: all var(--trend-seconds) linear;
-                -o-transition: all var(--trend-seconds) linear;
-                -ms-transition: all var(--trend-seconds) linear;
-                transition: all var(--trend-seconds) linear;
+                -webkit-transition: all var(--trans-length) linear;
+                -moz-transition: all var(--trans-length) linear;
+                -o-transition: all var(--trans-length) linear;
+                -ms-transition: all var(--trans-length) linear;
+                transition: all var(--trans-length) linear;
             }
 
                 .header-buff {
