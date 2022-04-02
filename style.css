@@ -76,6 +76,12 @@ nav img,
     filter: invert(1);
 }
 
+.project-title h4,
+.announce-title h4 {
+    font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
 .spacer {
     display: flex;
     height: 0px; width: 0px;
@@ -302,11 +308,6 @@ nav img,
 
                 background-color: white;
             }
-
-                .project-title h4 {
-                    font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
-                    font-weight: bolder;
-                }
 
                 .project-icns {
                     display: flex;
