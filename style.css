@@ -277,7 +277,7 @@ nav img,
         .proj-cards {
             display: grid;
             grid-auto-rows: auto;
-            grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
             gap: 1rem;
         }
 
@@ -563,7 +563,6 @@ nav img,
                 }
 
     /* NAVIGATION -------------------- */
-    /* todo set min height to stop when element cannot shrink without clipping*/
     .nav {
         display: grid;
         grid-template: auto 1fr / 1fr;
