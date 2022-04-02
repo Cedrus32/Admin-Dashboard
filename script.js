@@ -58,7 +58,6 @@ function getHeight(target) {
 }
 
 function sectionHideToggle(target, height) {
-    // console.log(height); //* working */
     let sectionContent = target.parentElement.parentElement.parentElement.children[1];
     if (target.classList.contains('vert-exp') === true) {
         sectionContent.style.height = height;

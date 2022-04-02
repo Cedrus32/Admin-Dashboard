@@ -4,14 +4,14 @@
 
 :root {
     --ui-rad: 30px;
-    --icn-gap: 0.5rem;
+    --ui-icn-gap: 0.5rem;
     --user-pic-height: 5rem;
-    --nav-h2-icn-height: 1.5rem;
+    --ui-icn-height: 1.5rem;
 
     --item-padding: 1.5rem;
     --container-padding: 1vh;
-    --element-header-font-size: 1.12rem;
-
+    
+    --section-header-font-size: 1.12rem;
     --header-height: 3.75rem;
 
     --trans-length: 0.2s;
@@ -64,7 +64,7 @@ nav img,
 .menu-icns,
 .menu-icns img,
 .project-icns img {
-    height: var(--nav-h2-icn-height); width: auto;
+    height: var(--ui-icn-height); width: auto;
 }
 
 .linkdrop img,
@@ -169,7 +169,7 @@ nav img,
 
     .search {
         display: flex;
-        gap: var(--icn-gap);
+        gap: var(--ui-icn-gap);
         padding-right: 2rem;
     }
 
@@ -181,7 +181,7 @@ nav img,
     .proj-manage {
         display: flex;
         justify-content: flex-end;
-        gap: var(--icn-gap);
+        gap: var(--ui-icn-gap);
     }
 
         .proj-manage img {
@@ -264,7 +264,6 @@ nav img,
         gap: var(--item-padding);
         
         background-color: #F6F6F6;
-        /* padding: var(--item-padding); */
         border-radius: var(--ui-rad);
     }
 
@@ -273,7 +272,7 @@ nav img,
             border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
 
             background-color: #E5C441;
-            font-size: var(--element-header-font-size);
+            font-size: var(--section-header-font-size);
             font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
             font-weight: bolder;
         }
@@ -281,7 +280,7 @@ nav img,
             .primary-title .title-container {
                 display: flex;
                 align-items: center;
-                min-height: var(--nav-h2-icn-height);
+                min-height: var(--ui-icn-height);
             }
 
         .proj-cards {
@@ -347,7 +346,7 @@ nav img,
                 padding: var(--item-padding);
                 border-radius: var(--ui-rad);
 
-                font-size: var(--element-header-font-size);
+                font-size: var(--section-header-font-size);
                 font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
                 font-weight: bolder;
             }
@@ -611,7 +610,7 @@ nav img,
             display: flex;
             align-items: center;
             justify-items: center;
-            gap: calc(3 * var(--icn-gap));
+            gap: calc(3 * var(--ui-icn-gap));
 
             padding-bottom: 2rem;
             font-size: 2.5rem;
@@ -654,7 +653,7 @@ nav img,
                         }
 
                         nav li img {
-                            padding-right: var(--icn-gap);
+                            padding-right: var(--ui-icn-gap);
                         }
 
                 nav .spacer {
