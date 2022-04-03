@@ -198,8 +198,8 @@ nav img,
     background-color: #3E1BBC;
     color: white;
     border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
-    margin-top: calc(-1 * calc(var(--ui-rad) + 20px));
-    margin-bottom: 10px;
+    margin-top: calc(-1 * calc(var(--ui-rad) + 10px));
+    /* margin-bottom: -10px; */
     z-index: -1;
 }
 
@@ -256,6 +256,7 @@ nav img,
     grid-area: primary-content;
     display: grid;
     grid-template: auto auto / auto;
+    padding-bottom: 0px;
 }
 
     main {
@@ -503,9 +504,9 @@ nav img,
         gap: 10px;
     }
 
+    /* PRIMARY CONTENT -------------------- */
     .primary-content {
         grid-template: 1fr / auto;
-        margin-bottom: -10px;
     }
 
         main {
@@ -524,6 +525,11 @@ nav img,
             main .spacer {
                 align-self: end;
             }
+    
+    /* SECONDARY CONTENT -------------------- */
+    .secondary-content {
+        padding-bottom: 0px;
+    }
     
 }
 
@@ -597,8 +603,11 @@ nav img,
         grid-template: auto 1fr / 1fr;
         justify-content: start;
 
-        height: 100%;
+        height: calc(100vh - calc(2 * var(--container-padding)));
         min-height: max-content;
+
+        position: sticky;
+        top: var(--container-padding); left: var(--container-padding);
 
         border-radius: var(--ui-rad);
         padding: var(--item-padding);
@@ -663,7 +672,6 @@ nav img,
     /* PRIMARY CONTENT -------------------- */
     .primary-content {
         grid-template: 1fr / auto;
-        margin-bottom: -10px;
     }
 
         main {
@@ -682,4 +690,9 @@ nav img,
             main .spacer {
                 align-self: end;
             }
+
+    /* SECONDARY CONTENT -------------------- */
+    .secondary-content {
+        padding-bottom: 0px;
+    }
 }
