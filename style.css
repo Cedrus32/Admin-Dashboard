@@ -346,27 +346,41 @@ nav img,
             grid-area: trend;
         }
 
-            .section-header {
-                display: flex;
-                align-items: center;
-
+            .header-container {
+                position: relative;
+                top: 0px; left: 0px;
                 z-index: 1;
-                padding: var(--item-padding);
-                border-radius: var(--ui-rad);
-
-                font-size: var(--section-header-font-size);
-                font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
-                font-weight: bolder;
             }
 
-            .announce .section-header {
-                background-color: #A6D04D;
-            }
+                .header-cover {
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
+                }
 
-            .trend .section-header {
-                background-color: #87D8F6;
-                min-width: 15rem;
-            }
+                .section-header {
+                    display: flex;
+                    align-items: center;
+
+                    padding: var(--item-padding);
+                    border-radius: var(--ui-rad);
+
+                    font-size: var(--section-header-font-size);
+                    font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
+                    font-weight: bolder;
+                }
+
+                .announce .section-header {
+                    background-color: #A6D04D;
+                }
+
+                .trend .section-header {
+                    background-color: #87D8F6;
+                    min-width: 15rem;
+                }
 
             .section-content {
                 display: grid;
@@ -376,6 +390,7 @@ nav img,
                 position: relative;
                 top: calc(-1.15 * var(--item-padding));
                 overflow: hidden;
+                z-index: 0;
 
                 background-color: #F6F6F6;
                 opacity: 1;

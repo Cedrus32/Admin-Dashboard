@@ -24,7 +24,7 @@ linkDrop.addEventListener('click', () => {
 // ------------------------- //
 
 function setInitHeight(target) {
-    let sectionContent = target.parentElement.parentElement.parentElement.children[1];
+    let sectionContent = target.parentElement.parentElement.children[1];
     let sectionHeight = sectionContent.clientHeight;
     if (sectionHeight > 1) {
         sectionContent.style.height = sectionHeight + 'px';
@@ -32,17 +32,18 @@ function setInitHeight(target) {
 }
 
 function switchHeaderIcon(target) {
-    if (target.classList.contains('vert-exp') === true) {
-        target.classList = 'vert-coll';
-        target.src = './assets/icons/menu-up.svg';
-    } else if (target.classList.contains('vert-coll') === true) {
-        target.classList = 'vert-exp';
-        target.src = './assets/icons/menu-down.svg';
+    let headerIcon = target.parentElement.children[1].children[2].children[0];
+    if (headerIcon.classList.contains('vert-exp') === true) {
+        headerIcon.classList = 'vert-coll';
+        headerIcon.src = './assets/icons/menu-up.svg';
+    } else if (headerIcon.classList.contains('vert-coll') === true) {
+        headerIcon.classList = 'vert-exp';
+        headerIcon.src = './assets/icons/menu-down.svg';
     }
 }
 
 function getHeight(target) {
-    let sectionContent = target.parentElement.parentElement.parentElement.children[1];
+    let sectionContent = target.parentElement.parentElement.children[1];
     let displayedHeight = sectionContent.clientHeight;
     let contentHeight = sectionContent.scrollHeight;
     if (displayedHeight === 1) { // if fully collapsed...
@@ -58,12 +59,13 @@ function getHeight(target) {
 }
 
 function sectionHideToggle(target, height) {
-    let sectionContent = target.parentElement.parentElement.parentElement.children[1];
-    if (target.classList.contains('vert-exp') === true) {
+    let sectionContent = target.parentElement.parentElement.children[1];
+    let headerIcon = target.parentElement.children[1].children[2].children[0];
+    if (headerIcon.classList.contains('vert-exp') === true) {
         sectionContent.style.height = height;
         // console.log("it's getting bigger");
         setTimeout(resetHeight, 200, sectionContent);
-    } else if (target.classList.contains('vert-coll') === true) {
+    } else if (headerIcon.classList.contains('vert-coll') === true) {
         sectionContent.style.height = height;
         // console.log("it's getting smaller");
     }
@@ -74,7 +76,10 @@ function resetHeight(target) {
 }
 
 let menuIcons = document.querySelectorAll('.menu-icns img');
-menuIcons.forEach(icon => icon.addEventListener('click', (e) => {
+let menuHeaders = document.querySelectorAll('div.header-cover');
+console.log(menuHeaders);
+
+menuHeaders.forEach(header => header.addEventListener('click', (e) => {
     let menuTarget = e.target;
     setInitHeight(menuTarget);
     switchHeaderIcon(menuTarget);
