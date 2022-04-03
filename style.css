@@ -300,23 +300,24 @@ nav img,
 
                 padding: 0.5rem;
                 max-width: 1fr; height: 14rem;
-                border-left: 5px solid #E5C441;
+                border-left: 5px solid #F0D463;
                 border-radius: 5px 15px 15px 5px;
 
                 background-color: white;
             }
 
-            .card-hover {
-                border-left: 5px solid hsl(48, 100%, 75%);
+            .card:hover {
+                border-left: 5px solid #FBE486;
             }
 
                 .project-icns {
                     display: flex;
                     justify-content: flex-end;
+                    gap: var(--ui-icn-gap);
                 }
 
         main .content-footer {
-            background-color: #E5C441;
+            background-color: #F0D463;
             height: calc(1.15 * var(--item-padding));
             border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
             margin-top: calc(-1.15 * calc(var(--item-padding)));

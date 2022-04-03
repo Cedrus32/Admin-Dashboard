@@ -77,7 +77,6 @@ function resetHeight(target) {
 
 let menuIcons = document.querySelectorAll('.menu-icns img');
 let menuHeaders = document.querySelectorAll('div.header-cover');
-console.log(menuHeaders);
 
 menuHeaders.forEach(header => header.addEventListener('click', (e) => {
     let menuTarget = e.target;
