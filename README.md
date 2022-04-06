@@ -4,9 +4,9 @@ Completed Through The Odin Project
 
 cedrus32.github.io/admin-dashboard/
 
-The goal of this project was to find a balance between CSS flex and grid properties to create a responsive layout. My biggest challenge was ensuring element padding, margins, and positioning remained consistent and workable across view widths.
+The goal of this project was to find a balance between CSS flex and grid properties to create a responsive layout. My biggest challenge during the initial build-out was ensuring element padding, margins, and positioning remained consistent and workable across view widths.
 
-I used JavaScript to allow user hide/show the navigation bar (in mobile and tablet views) and select headers (across all views). This revealed issues with the original document structure and styling. To address this, I modified some of the HTML structure and built out the JavaScript to capture and apply desired the styling rules.
+I used JavaScript to allow the user to hide/show the navigation bar (in mobile and tablet views) and announcement/trending headers (across all views). This revealed issues with the original document structure and styling. To address this, I modified parts of the HTML structure and built out the JavaScript to capture and apply desired the styling rules.
 
 I am currently exploring final UX effects including link and button animations/transitions.
 
