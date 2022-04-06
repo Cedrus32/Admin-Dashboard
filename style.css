@@ -97,7 +97,6 @@ nav img,
 
 /* CONTAINER -------------------- */
 .container {
-    /* padding: var(--container-padding); */
     position: relative;
     top: 0px; left: 0px;
 }
@@ -110,41 +109,13 @@ nav img,
 .header1 {
     grid-area: header1;
     background-color: #3E1BBC;
-    /* border-radius: var(--ui-rad); */
-
-    /* position: relative;
-    top: calc(-1 * var(--container-padding));
-    left: calc(-1 * var(--container-padding));
-    margin-right: calc(-2 * var(--container-padding)); */
 
     padding-top: calc(2 * var(--container-item-padding));
     padding-bottom: calc(2 * var(--container-item-padding));
     margin-bottom: calc(-1 * var(--grid-gap));
-
-
-    /* display: grid;
-    grid-template: auto 1fr / 1fr;
-    justify-content: start;
-
-    min-height: max-content;
-    height: auto;
-
-    position: relative;
-    top: 0px; left: 0px;
-
-    border-radius: 0px;
-    position: relative;
-    top: 0px; left: 0px;
-
-    border-radius: 0px;
-    padding: calc(var(--item-padding) + var(--container-padding) + var(--container-padding)) var(--item-padding);
-    margin: calc(-1 * var(--container-padding)) 0px calc(-1 * var(--container-padding)) calc(-1 * var(--container-padding)); */
 }
 
     .header1 header {
-        /* display: grid;
-        grid-template: auto / 1fr auto;
-        align-items: center; */
         display: flex;
         align-items: center;
     }
@@ -173,7 +144,6 @@ nav img,
             }
 
         .profile-icons {
-            /* justify-content: flex-end; */
             align-items: center;
             padding-right: calc(var(--container-item-padding) / 2);
         }
@@ -236,32 +206,11 @@ nav img,
     z-index: -1;
 
     padding-top: calc(var(--grid-gap) + var(--ui-icn-height) + var(--container-item-padding));
-    /* margin-top: calc(-1 * var(--grid-gap)); */
     margin-top: calc(-1 * calc(var(--grid-gap) + var(--ui-icn-height) + var(--container-item-padding)));
 
     border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
     background-color: #3E1BBC;
     color: white;
-
-
-
-    /* display: grid;
-    grid-template: auto 1fr / 1fr;
-    justify-content: start;
-
-    min-height: max-content;
-    height: auto;
-
-    position: relative;
-    top: 0px; left: 0px;
-
-    border-radius: 0px;
-    position: relative;
-    top: 0px; left: 0px;
-
-    border-radius: 0px;
-    padding: calc(var(--item-padding) + var(--container-padding) + var(--container-padding)) var(--item-padding);
-    margin: calc(-1 * var(--container-padding)) 0px calc(-1 * var(--container-padding)) calc(-1 * var(--container-padding)); */
 }
 
     .dash-title {
@@ -318,9 +267,7 @@ nav img,
 .primary-content {
     grid-area: primary-content;
     display: grid;
-    /* grid-template: auto auto / auto; */
     grid-template: 1fr / auto;
-    /* padding-bottom: 0px; */
 }
 
     main {
@@ -402,7 +349,6 @@ nav img,
         grid-template-rows: auto;
         grid-template-areas: 'announce'
                              'trend';
-        /* gap: calc(4 * var(--container-padding)); */
         gap: calc(calc(2 * var(--container-item-padding)) + var(--grid-gap));
     }
 
@@ -621,23 +567,18 @@ nav img,
 
     /* PRIMARY CONTENT -------------------- */
     .primary-content {
-        /* grid-template: 1fr / auto; */
         padding-left: calc(calc(2 * var(--container-item-padding)) + var(--grid-gap));
         padding-bottom: calc(calc(2 * var(--container-item-padding)) + var(--grid-gap));
     }
 
-        /* main {
-            grid-template: max-content max-content 1fr / auto;
-        } */
+        .proj-cards {
+            display: grid;
+            grid-auto-rows: auto;
+            grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+            gap: 1rem;
 
-            .proj-cards {
-                display: grid;
-                grid-auto-rows: auto;
-                grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-                gap: 1rem;
-
-                padding: 0px var(--item-padding);
-            }
+            padding: 0px var(--item-padding);
+        }
     
     /* SECONDARY CONTENT -------------------- */
     .secondary-content {
@@ -687,7 +628,6 @@ nav img,
     }
 
     /* HEADERS -------------------- */
-
     .header1 {
         background-color: transparent;
         /* border-radius: 0px; */
@@ -715,7 +655,6 @@ nav img,
                 }
     
     .header2 {
-        /* padding-top: 0px; * keep from header1 * */
         padding-right: calc(calc(2 * var(--container-item-padding)) + var(--grid-gap));
         margin-top: 0px;
     }
@@ -729,17 +668,9 @@ nav img,
         min-height: max-content;
         height: auto;
 
-        /* position: relative;
-        top: calc(-1 * var(--container-padding));
-        left: calc(-1 * var(--container-padding)); */
-        /* margin-right: calc(-2 * var(--container-padding)); */
-
         border-radius: 0px;
         margin: 0px var(--container-item-padding) 0px 0px;
-        /* margin: 0px; */
         padding: calc(calc(2 * var(--container-item-padding)) + var(--grid-gap));
-        /* padding: calc(var(--item-padding) + var(--container-padding) + var(--container-padding)) var(--item-padding);
-        margin: calc(-1 * var(--container-padding)) 0px calc(-1 * var(--container-padding)) calc(-1 * var(--container-padding)); */
     }
 
         .dash-title {
@@ -799,22 +730,17 @@ nav img,
 
     /* PRIMARY CONTENT -------------------- */
     .primary-content {
-        /* grid-template: 1fr / auto; */
         padding-bottom: calc(calc(2 * var(--container-item-padding)) + var(--grid-gap));
     }
 
-        /* main {
-            grid-template: max-content max-content 1fr / auto;
-        } */
+        .proj-cards {
+            display: grid;
+            grid-auto-rows: auto;
+            grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+            gap: 1rem;
 
-            .proj-cards {
-                display: grid;
-                grid-auto-rows: auto;
-                grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-                gap: 1rem;
-
-                padding: 0px var(--item-padding);
-            }
+            padding: 0px var(--item-padding);
+        }
 
     /* SECONDARY CONTENT -------------------- */
     .secondary-content {
