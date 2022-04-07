@@ -37,6 +37,7 @@
 body {
     font-family: 'Roboto-L', Arial, Helvetica, sans-serif;
     font-size: 0.9rem;
+    height: 100vh;
 }
 
 ul {
@@ -99,6 +100,7 @@ nav img,
 .container {
     position: relative;
     top: 0px; left: 0px;
+    height: 100%;
 }
 
     .container-item {
@@ -539,9 +541,9 @@ nav img,
 @media only screen and (min-width: 654px) and (max-width: 1100px) {
     /* GRID LAYOUT -------------------- */
     :root {
-        --header1-height: 2fr;
-        --header2-height: 1fr;
-        --nav-height: 1fr;
+        --header1-height: auto;
+        --header2-height: auto;
+        --nav-height: auto;
         --content-height: 1fr;
 
         --primary-width: 7fr;
@@ -592,8 +594,8 @@ nav img,
 @media only screen and (min-width: 1101px) {
     /* GRID LAYOUT -------------------- */
     :root {
-        --header1-height: max-content;
-        --header2-height: max-content;
+        --header1-height: auto;
+        --header2-height: auto;
         --content-height: 1fr;
 
         --nav-width: max-content;
@@ -630,11 +632,9 @@ nav img,
     /* HEADERS -------------------- */
     .header1 {
         background-color: transparent;
-        /* border-radius: 0px; */
         padding-right: calc(calc(2 * var(--container-item-padding)) + var(--grid-gap));
         padding-top: calc(calc(2 * var(--container-item-padding)) + var(--grid-gap));
         padding-bottom: var(--container-item-padding);
-        /* margin-bottom: 0px; */
     }
 
         .header1 header {
@@ -667,6 +667,7 @@ nav img,
 
         min-height: max-content;
         height: auto;
+        max-height: auto;
 
         border-radius: 0px;
         margin: 0px var(--container-item-padding) 0px 0px;
