@@ -317,14 +317,10 @@ nav img,
 
                 padding: 0.5rem;
                 max-width: 1fr; height: 14rem;
-                border-left: 5px solid #F0D463;
+                border-left: 5px solid #F9E07D;
                 border-radius: 5px 15px 15px 5px;
 
                 background-color: white;
-            }
-
-            .card:hover {
-                border-left: 5px solid #FBE486;
             }
 
                 .project-icns {
@@ -339,11 +335,75 @@ nav img,
         }
 
         main .content-footer {
-            background-color: #F0D463;
+            background-color: #F9E07D;
             height: calc(1.15 * var(--item-padding));
             border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
             margin-top: calc(-1.15 * calc(var(--item-padding)));
         }
+
+/* card hover effect */
+.card {
+    /* set position as parent element to future pseudo children */
+    position: relative;
+    top: 0px; left: 0px;
+
+    /* set perspective/translation on z-axis */
+    -webkit-transform: perspective(0) translateZ(0);
+    transform: perspective(0) translateZ(0);
+
+    /* set which properties to apply transition */
+    /* -webkit-transition-property: color;
+    transition-property: color; */
+    /* set transition length */
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.card::before {
+    /* set look of ::before first pseudo child */
+    content: '';
+    border-radius: 0px 15px 15px 0px;
+    border-top: 3px solid #F9E07D;
+    border-right: 3px solid #F9E07D;
+    border-bottom: 3px solid #F9E07D;
+
+    /* position ::before outside normal flow */
+    position: absolute;
+    top: 0px; left: 0px; right: 0px; bottom: 0px;
+    /* place ::before behind siblings */
+    z-index: -1;
+
+    /* set initial x-axis scaling */
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    /* set origin or transormation to halfway down left side */
+    /* * add media query for prefers-reduced-motion * */
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    
+    /* set which proprty will apply to transition */
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    /* set transition length */
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    /* set manner of transition timing */
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.card:hover::before,
+.card:focus::before,
+.card:active::before {
+
+    /* set final x-axis scaling after transition */
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    
+    /* set transition timing */
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
 
 /* SECONDARY CONTENT -------------------- */
 .secondary-content {
