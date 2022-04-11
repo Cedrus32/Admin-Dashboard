@@ -249,28 +249,6 @@ nav img,
                     font-size: 1.12rem;
                 }
 
-.hide-nav {
-    /* transition */
-    padding-top: 0px;
-    border-radius: 0px;
-    -webkit-transition: all var(--trans-length) linear;
-    -moz-transition: all var(--trans-length) linear;
-    -o-transition: all var(--trans-length) linear;
-    -ms-transition: all var(--trans-length) linear;
-    transition: all var(--trans-length) linear;
-}
-
-.show-nav {
-    /* transition */
-    padding-top: calc(var(--grid-gap) + var(--ui-icn-height) + var(--container-item-padding));
-    border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
-    -webkit-transition: all var(--trans-length) linear;
-    -moz-transition: all var(--trans-length) linear;
-    -o-transition: all var(--trans-length) linear;
-    -ms-transition: all var(--trans-length) linear;
-    transition: all var(--trans-length) linear;
-}
-
 /* PRIMARY CONTENT -------------------- */
 .primary-content {
     grid-area: primary-content;

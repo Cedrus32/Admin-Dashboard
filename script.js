@@ -1,19 +1,3 @@
-// ------------- //
-// NAV HIDE/SHOW //
-// ------------- //
-
-function navHideToggle(item) {
-    let navShow = nav.classList.contains('show-nav');
-    if (navShow === true) {
-        item.classList.remove('show-nav');
-        item.classList.add('hide-nav');
-    } else if (navShow === false) {
-        item.classList.remove('hide-nav');
-        item.classList.add('show-nav');
-    }
-}
-
-
 // ------------------------- //
 // SECTION CONTENT HIDE/SHOW //
 // ------------------------- //
@@ -74,12 +58,6 @@ function resetHeight(target) {
 // MEDIA QUERY
 function runMotion(x) {
     if (x.matches) {
-        let linkDrop = document.querySelector('.linkdrop img');
-        let nav = document.querySelector('div.container-item.nav');
-        linkDrop.addEventListener('click', () => {
-            navHideToggle(nav);
-        });
-
         let menuHeaders = document.querySelectorAll('div.header-cover');
         menuHeaders.forEach(header => header.addEventListener('click', (e) => {
             let menuTarget = e.target;
