@@ -417,26 +417,6 @@ nav img,
 
                 background-color: #F6F6F6;
                 opacity: 1;
-                
-                /* transition */
-                min-height: max-content;
-                height: auto;
-            }
-
-            .announce .section-content {
-                -webkit-transition: all var(--trans-length) linear;
-                -moz-transition: all var(--trans-length) linear;
-                -o-transition: all var(--trans-length) linear;
-                -ms-transition: all var(--trans-length) linear;
-                transition: all var(--trans-length) linear;
-            }
-
-            .trend .section-content {
-                -webkit-transition: all var(--trans-length) linear;
-                -moz-transition: all var(--trans-length) linear;
-                -o-transition: all var(--trans-length) linear;
-                -ms-transition: all var(--trans-length) linear;
-                transition: all var(--trans-length) linear;
             }
 
                 .header-buff {
@@ -511,7 +491,7 @@ nav img,
 /* ------------------------ */
 
 @media (prefers-reduced-motion: no-preference) {
-    /* card hover effect */
+    /* PRIMARY CONTENT CARD HOVER TRANSITION */
     .card {
         /* set position as parent element to future pseudo children */
         position: relative;
@@ -572,6 +552,28 @@ nav img,
         /* set transition timing */
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
+    }
+
+    /* SECONDARY CONTENT HIDE/SHOW */
+    .section-content {
+        min-height: max-content;
+        height: auto;
+    }
+
+    .announce .section-content {
+        -webkit-transition: all var(--trans-length) linear;
+        -moz-transition: all var(--trans-length) linear;
+        -o-transition: all var(--trans-length) linear;
+        -ms-transition: all var(--trans-length) linear;
+        transition: all var(--trans-length) linear;
+    }
+
+    .trend .section-content {
+        -webkit-transition: all var(--trans-length) linear;
+        -moz-transition: all var(--trans-length) linear;
+        -o-transition: all var(--trans-length) linear;
+        -ms-transition: all var(--trans-length) linear;
+        transition: all var(--trans-length) linear;
     }
 }
 
