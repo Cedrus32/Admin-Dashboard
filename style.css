@@ -289,7 +289,7 @@ nav img,
 
                 padding: 0.5rem;
                 max-width: 1fr; height: 14rem;
-                border-left: 5px solid #F9E07D;
+                border-left: 5px solid #E5C441;
                 border-radius: 5px 15px 15px 5px;
 
                 background-color: white;
@@ -307,7 +307,7 @@ nav img,
         }
 
         main .content-footer {
-            background-color: #F9E07D;
+            background-color: #E5C441;
             height: calc(1.15 * var(--item-padding));
             border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
             margin-top: calc(-1.15 * calc(var(--item-padding)));
@@ -482,9 +482,9 @@ nav img,
         /* set look of ::before first pseudo child */
         content: '';
         border-radius: 0px 15px 15px 0px;
-        border-top: 1px solid #F9E07D;
-        border-right: 1px solid #F9E07D;
-        border-bottom: 1px solid #F9E07D;
+        border-top: 1px solid #E5C441;
+        border-right: 1px solid #E5C441;
+        border-bottom: 1px solid #E5C441;
 
         /* position ::before outside normal flow */
         position: absolute;
