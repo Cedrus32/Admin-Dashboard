@@ -2,9 +2,6 @@
 // NAV HIDE/SHOW //
 // ------------- //
 
-let linkDrop = document.querySelector('.linkdrop img');
-let nav = document.querySelector('div.container-item.nav');
-
 function navHideToggle(item) {
     let navShow = nav.classList.contains('show-nav');
     if (navShow === true) {
@@ -20,9 +17,6 @@ function navHideToggle(item) {
 // ------------------------- //
 // SECTION CONTENT HIDE/SHOW //
 // ------------------------- //
-
-let menuIcons = document.querySelectorAll('.menu-icns img');
-let menuHeaders = document.querySelectorAll('div.header-cover');
 
 function setInitHeight(target) {
     let sectionContent = target.parentElement.parentElement.children[1];
@@ -80,10 +74,13 @@ function resetHeight(target) {
 // MEDIA QUERY
 function runMotion(x) {
     if (x.matches) {
+        let linkDrop = document.querySelector('.linkdrop img');
+        let nav = document.querySelector('div.container-item.nav');
         linkDrop.addEventListener('click', () => {
             navHideToggle(nav);
         });
 
+        let menuHeaders = document.querySelectorAll('div.header-cover');
         menuHeaders.forEach(header => header.addEventListener('click', (e) => {
             let menuTarget = e.target;
             setInitHeight(menuTarget);
