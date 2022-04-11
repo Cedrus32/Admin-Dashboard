@@ -55,7 +55,10 @@ function resetHeight(target) {
 }
 
 
-// MEDIA QUERY
+// ----------------- //
+// CHECK MEDIA QUERY //
+// ----------------- //
+
 function runMotion(x) {
     if (x.matches) {
         let menuHeaders = document.querySelectorAll('div.header-cover');
