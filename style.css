@@ -16,7 +16,14 @@
     --section-header-font-size: 1.12rem;
     --header-height: 3.75rem;
 
-    --trans-length: 0.2s;
+    --hs-trans-length: 0.4s;
+    --hov-trans-length: 0.2s;
+
+    --purple: #3E1BBC;
+    --yellow: #E5C441;
+    --green: #A6D04D;
+    --blue: #87D8F6;
+    --grey-bg: #F6F6F6;
 }
 
 @font-face {
@@ -110,7 +117,7 @@ nav img,
 /* HEADER1 -------------------- */
 .header1 {
     grid-area: header1;
-    background-color: #3E1BBC;
+    background-color: var(--purple);
 
     padding-top: calc(2 * var(--container-item-padding));
     padding-bottom: calc(2 * var(--container-item-padding));
@@ -211,7 +218,7 @@ nav img,
     margin-top: calc(-1 * calc(var(--grid-gap) + var(--ui-icn-height) + var(--container-item-padding)));
 
     border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
-    background-color: #3E1BBC;
+    background-color: var(--purple);
     color: white;
 }
 
@@ -253,7 +260,7 @@ nav img,
         grid-template: max-content max-content 1fr / auto;
         gap: var(--item-padding);
         
-        background-color: #F6F6F6;
+        background-color: var(--grey-bg);
         border-radius: var(--ui-rad);
     }
 
@@ -261,7 +268,7 @@ nav img,
             padding: var(--item-padding);
             border-radius: var(--ui-rad) var(--ui-rad) 0px 0px;
 
-            background-color: #E5C441;
+            background-color: var(--yellow);
             font-size: var(--section-header-font-size);
             font-family: 'Roboto-R', Arial, Helvetica, sans-serif;
             font-weight: bolder;
@@ -289,7 +296,7 @@ nav img,
 
                 padding: 0.5rem;
                 max-width: 1fr; height: 14rem;
-                border-left: 5px solid #E5C441;
+                border-left: 5px solid var(--yellow);
                 border-radius: 5px 15px 15px 5px;
 
                 background-color: white;
@@ -307,7 +314,7 @@ nav img,
         }
 
         main .content-footer {
-            background-color: #E5C441;
+            background-color: var(--yellow);
             height: calc(1.15 * var(--item-padding));
             border-radius: 0px 0px var(--ui-rad) var(--ui-rad);
             margin-top: calc(-1.15 * calc(var(--item-padding)));
@@ -330,7 +337,7 @@ nav img,
             display: grid;
             grid-template: auto auto auto / auto;
             border-radius: var(--ui-rad);
-            background-color: #F6F6F6;
+            background-color: var(--grey-bg);
         }
 
         .announce {
@@ -369,11 +376,11 @@ nav img,
                 }
 
                 .announce .section-header {
-                    background-color: #A6D04D;
+                    background-color: var(--green);
                 }
 
                 .trend .section-header {
-                    background-color: #87D8F6;
+                    background-color: var(--blue);
                     min-width: 15rem;
                 }
 
@@ -387,7 +394,7 @@ nav img,
                 overflow: hidden;
                 z-index: 0;
 
-                background-color: #F6F6F6;
+                background-color: var(--grey-bg);
                 opacity: 1;
             }
 
@@ -396,11 +403,11 @@ nav img,
                 }
 
                 .announce .header-buff {
-                    background-color: #A6D04D;
+                    background-color: var(--green);
                 }
 
                 .trend .header-buff {
-                    background-color: #87D8F6;
+                    background-color: var(--blue);
                 }
 
                 .section-cards {
@@ -450,11 +457,11 @@ nav img,
                 }
 
                 .announce .content-footer {
-                    background-color: #A6D04D;
+                    background-color: var(--green);
                 }
 
                 .trend .content-footer {
-                    background-color: #87D8F6;
+                    background-color: var(--blue);
                 }
 
 
@@ -482,9 +489,9 @@ nav img,
         /* set look of ::before first pseudo child */
         content: '';
         border-radius: 0px 15px 15px 0px;
-        border-top: 1px solid #E5C441;
-        border-right: 1px solid #E5C441;
-        border-bottom: 1px solid #E5C441;
+        border-top: 1px solid var(--yellow);
+        border-right: 1px solid var(--yellow);
+        border-bottom: 1px solid var(--yellow);
 
         /* position ::before outside normal flow */
         position: absolute;
@@ -503,8 +510,8 @@ nav img,
         -webkit-transition-property: transform;
         transition-property: transform;
         /* set transition length */
-        -webkit-transition-duration: 0.2s;
-        transition-duration: 0.2s;
+        -webkit-transition-duration: var(--hov-trans-length);
+        transition-duration: var(--hov-trans-length);
         /* set manner of transition timing */
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
@@ -530,13 +537,13 @@ nav img,
     }
 
     .announce .section-content {
-        -webkit-transition: all var(--trans-length) linear;
-        transition: all var(--trans-length) linear;
+        -webkit-transition: all var(--hs-trans-length) linear;
+        transition: all var(--hs-trans-length) linear;
     }
 
     .trend .section-content {
-        -webkit-transition: all var(--trans-length) linear;
-        transition: all var(--trans-length) linear;
+        -webkit-transition: all var(--hs-trans-length) linear;
+        transition: all var(--hs-trans-length) linear;
     }
 }
 
