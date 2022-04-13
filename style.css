@@ -67,12 +67,12 @@ a {
 .alerts,
 .search img,
 input#searchbar,
-.proj-manage img,
 nav img,
 #expand,
 #collapse,
 .menu-icns,
 .menu-icns img,
+.project-icns a,
 .project-icns img {
     height: var(--ui-icn-height); width: auto;
 }
@@ -202,11 +202,15 @@ nav img,
         gap: var(--ui-icn-gap);
     }
 
+        .proj-manage a,
+        .proj-manage img {
+            height: 1.75rem; width: auto;
+        }
+
         .proj-manage img {
             padding: 0.25rem;
             border: solid 1px black;
             border-radius: 50%;
-            height: 1.75rem; width: auto;
         }
 
 /* NAV -------------------- */
@@ -469,6 +473,21 @@ nav img,
 /* TRANSITIONS & TRANSFORMS */
 /* ------------------------ */
 
+/* NAV LINK HOVER */
+nav li a:hover,
+nav li a:focus,
+nav li a:active {
+   text-decoration: underline;
+}
+
+/* PROJECT ICON CLICK */
+.proj-manage img:focus,
+.proj-manage img:active,
+.project-icns img:focus,
+.project-icns img:active {
+    transform: scale(0.9);
+}
+
 @media (prefers-reduced-motion: no-preference) {
     /* PRIMARY CONTENT CARD HOVER TRANSITION */
     .card {
@@ -714,6 +733,7 @@ nav img,
         border-radius: 0px;
         margin: 0px var(--container-item-padding) 0px 0px;
         padding: calc(calc(2 * var(--container-item-padding)) + var(--grid-gap));
+        z-index: 1;
     }
 
         .dash-title {
