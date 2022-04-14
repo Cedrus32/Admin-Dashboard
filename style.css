@@ -480,6 +480,18 @@ nav li a:active {
    text-decoration: underline;
 }
 
+/* PROJECT CARD HOVER */
+.card:hover,
+.card:focus,
+.card:active {
+    border-top: 1px solid var(--yellow);
+    border-right: 1px solid var(--yellow);
+    border-bottom: 1px solid var(--yellow);
+
+    margin: -1px -1px -1px 0px;
+    padding-bottom: calc(0.5rem - 2px);
+}
+
 /* PROJECT ICON CLICK */
 .proj-manage img:focus,
 .proj-manage img:active,
@@ -502,6 +514,16 @@ nav li a:active {
         /* set which properties to apply transition */
         -webkit-transition-duration: 0.5s;
         transition-duration: 0.5s;
+    }
+
+    .card:hover {
+        /* reset rm styling */
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        
+        margin: 0px;
+        padding: 0.5rem;
     }
 
     .card::before {
@@ -539,7 +561,6 @@ nav li a:active {
     .card:hover::before,
     .card:focus::before,
     .card:active::before {
-
         /* set final x-axis scaling after transition */
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
