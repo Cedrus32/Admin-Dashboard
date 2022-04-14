@@ -129,27 +129,26 @@ nav img,
         align-items: center;
     }
 
-        .linkdrop,
+        /* .linkdrop, */
         .greeting,
         .profile-icons {
             display: flex;
         }
 
-        .linkdrop img {
-            height: 3rem; width: auto;
-        }
-
         .greeting {
-            display: none;
+            /* display: none; */
             color: white;
+            padding-right: var(--container-item-padding);
         }
 
             .say-hi {
-                font-size: 1.5rem;
+                font-size: calc(1rem + 0.5vw);
+                line-height: calc(1.4rem + 0.6vw);
             }
 
             .user {
-                font-size: 2rem;
+                font-size: calc(1rem + 1.5vw);
+                line-height: calc(1.4rem + 1.8vw);
             }
 
         .profile-icons {
