@@ -24,15 +24,15 @@ function switchHeaderIcon(target) {
 function getHeight(target) {
     let sectionContent = target.parentElement.parentElement.children[1];
     let displayedHeight = sectionContent.clientHeight;
-    let contentHeight = sectionContent.scrollHeight;
+    let actualHeight = sectionContent.scrollHeight;
     if (displayedHeight === 1) { // if fully collapsed...
-        let height = contentHeight + 'px';
+        let height = actualHeight + 'px';
         return height;
-    } else if (displayedHeight === contentHeight) { // if fully expanded...
+    } else if (displayedHeight === actualHeight) { // if fully expanded...
         let height = '1px';
         return height;
-    } else if ((displayedHeight < contentHeight) && (displayedHeight > 1)) { // if collapsING...
-        let height = contentHeight + 'px';
+    } else if ((displayedHeight < actualHeight) && (displayedHeight > 1)) { // if collapsING...
+        let height = actualHeight + 'px';
         return height;
     }
 }
@@ -43,7 +43,7 @@ function sectionHideToggle(target, height) {
     if (headerIcon.classList.contains('vert-exp') === true) {
         sectionContent.style.height = height;
         // console.log("it's getting bigger");
-        setTimeout(resetHeight, 200, sectionContent);
+        setTimeout(resetHeight, 400, sectionContent);
     } else if (headerIcon.classList.contains('vert-coll') === true) {
         sectionContent.style.height = height;
         // console.log("it's getting smaller");

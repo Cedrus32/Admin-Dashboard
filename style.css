@@ -119,8 +119,7 @@ nav img,
     grid-area: header1;
     background-color: var(--purple);
 
-    padding-top: calc(2 * var(--container-item-padding));
-    padding-bottom: calc(2 * var(--container-item-padding));
+    padding: calc(2 * var(--container-item-padding));
     margin-bottom: calc(-1 * var(--grid-gap));
 }
 
@@ -136,9 +135,7 @@ nav img,
         }
 
         .greeting {
-            /* display: none; */
             color: white;
-            padding-right: var(--container-item-padding);
         }
 
             .say-hi {
