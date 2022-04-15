@@ -507,7 +507,10 @@ nav li:active {
     nav li::before {
         /* set look of ::before pseudo child */
         content: '';
-        background-color: pink;
+        background-color: white;
+        padding: var(--container-item-padding);
+        margin: calc(-1 * var(--container-item-padding));
+        border-radius: 10px 10px 0px 0px;
 
         /* position ::before outside normal flow */
         position: absolute;
@@ -517,9 +520,17 @@ nav li:active {
 
     }
 
-    nav li:hover::before {
+    nav li:hover::before,
+    nav li:focus::before,
+    nav li:active::before {
         /* on hover, bring ::before pseudo to normal z-index */
         z-index: 0;
+    }
+
+    nav li:hover img,
+    nav li:focus img,
+    nav li:active img {
+        filter: invert(0);
     }
 
     /* PRIMARY CONTENT CARD HOVER TRANSITION */
