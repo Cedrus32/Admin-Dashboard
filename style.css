@@ -491,6 +491,10 @@ nav li:active {
     transform: scale(0.9);
 }
 
+/* ------------------------------ */
+/* FANCY TRANSITIONS & TRANSFORMS */
+/* ------------------------------ */
+
 @media (prefers-reduced-motion: no-preference) {
     /* NAV HOVER HIGHLIGHT */
     nav li:hover {
@@ -517,20 +521,116 @@ nav li:active {
         top: 0px; left: 0px; right: 0px; bottom: 0px;
         /* place ::before behind siblings */
         z-index: -1;
-
     }
 
     nav li:hover::before,
     nav li:focus::before,
     nav li:active::before {
-        /* on hover, bring ::before pseudo to normal z-index */
+        /* on hover, bring ::before to normal z-index */
         z-index: 0;
+    }
+
+    nav li:hover a,
+    nav li:focus a,
+    nav li:active a {
+        /* bring forward nav links with ::before */
+        z-index: 1;
     }
 
     nav li:hover img,
     nav li:focus img,
     nav li:active img {
         filter: invert(0);
+    }
+
+    .co-before,
+    .co-after {
+        display: none;
+    }
+
+    nav li:hover div,
+    nav li:focus div,
+    nav li:active div {
+        display: initial;
+    }
+
+        .neg-rad-lt,
+        .neg-rad-rb {
+            height: calc(100% + var(--container-item-padding)); width: 5px;
+        }
+
+        .neg-rad-lt {
+            position: absolute;
+            left: -15px; top: 0px;
+        }
+
+        .neg-rad-rb {
+            position: absolute;
+            left: calc(var(--ui-icn-height) + var(--container-item-padding)); top: 0px;
+        }
+
+        .cutout {
+            background-color: var(--purple);
+            z-index: 1;
+        }
+
+        .co-before .cutout {
+            border-radius: 0px 0px 5px 0px;
+        }
+
+        .co-after .cutout {
+            border-radius: 0px 0px 0px 5px;
+        }
+
+        .bg {
+            background-color: white;
+            z-index: 0;
+        }
+
+    /* change styling to fit with desktop nav layout */
+    @media only screen and (min-width: 1101px) {
+
+        nav li::before {
+            border-radius: 10px 0px 0px 10px;
+            width: 292px;
+        }
+
+            nav li:hover a {
+                color: black;
+            }
+
+            .neg-rad-lt,
+            .neg-rad-rb {
+                height: 5px; width: 282px;
+            }
+
+            .neg-rad-lt {
+                position: absolute;
+                left: 0px; top: -15px;
+            }
+
+            .neg-rad-rb {
+                position: absolute;
+                left: 0px; top: calc(var(--ui-icn-height) + var(--container-item-padding));
+            }
+
+            .cutout {
+                background-color: var(--purple);
+                z-index: 1;
+            }
+
+            .co-before .cutout {
+                border-radius: 0px 0px 5px 0px;
+            }
+
+            .co-after .cutout {
+                border-radius: 0px 5px 0px 0px;
+            }
+
+            .bg {
+                background-color: white;
+                z-index: 0;
+            }
     }
 
     /* PRIMARY CONTENT CARD HOVER TRANSITION */
