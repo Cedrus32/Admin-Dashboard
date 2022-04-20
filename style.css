@@ -529,6 +529,7 @@ nav li:active {
         transition: opacity var(--nav-hov-trans-length) ease-out;
     }
 
+    #page::before,
     nav li:hover::before,
     nav li:focus::before,
     nav li:active::before {
@@ -536,6 +537,7 @@ nav li:active {
         opacity: 1;
     }
 
+    #page a,
     nav li:hover a,
     nav li:focus a,
     nav li:active a {
@@ -543,6 +545,7 @@ nav li:active {
         z-index: 1;
     }
 
+    #page img,
     nav li:hover img,
     nav li:focus img,
     nav li:active img {
@@ -558,6 +561,7 @@ nav li:active {
         transition: opacity var(--nav-hov-trans-length) ease-out;
     }
 
+    #page div,
     nav li:hover div,
     nav li:focus div,
     nav li:active div {
@@ -606,6 +610,7 @@ nav li:active {
             width: 292px;
         }
 
+            #page a,
             nav li:hover a {
                 color: black;
             }
@@ -912,7 +917,7 @@ nav li:active {
                 ul.nav1,
                 ul.nav2 {
                     /* gap: 1rem; */
-                    gap: 1.5rem;
+                    gap: 1.75rem;
                 }
 
                 ul.nav1  {
@@ -942,7 +947,7 @@ nav li:active {
                         }
 
                 nav .spacer {
-                    height: 3rem;
+                    height: 3.75rem;
                 }
 
     /* PRIMARY CONTENT -------------------- */
