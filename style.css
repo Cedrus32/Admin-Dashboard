@@ -18,6 +18,7 @@
 
     --hs-trans-length: 0.4s;
     --hov-trans-length: 0.2s;
+    --nav-hov-trans-length: 0.1s;
 
     --purple: #3E1BBC;
     --yellow: #E5C441;
@@ -519,15 +520,20 @@ nav li:active {
         /* position ::before outside normal flow */
         position: absolute;
         top: 0px; left: 0px; right: 0px; bottom: 0px;
-        /* place ::before behind siblings */
-        z-index: -1;
+
+        /* make ::before transparent */
+        opacity: 0;
+        
+        /* set transition rules to fade in ::before on hover */
+        -webkit-transition: opacity var(--nav-hov-trans-length) ease-out;
+        transition: opacity var(--nav-hov-trans-length) ease-out;
     }
 
     nav li:hover::before,
     nav li:focus::before,
     nav li:active::before {
-        /* on hover, bring ::before to normal z-index */
-        z-index: 0;
+        /* on hover, make ::before opaque */
+        opacity: 1;
     }
 
     nav li:hover a,
@@ -545,13 +551,18 @@ nav li:active {
 
     .co-before,
     .co-after {
-        display: none;
+        /* display: none; */
+        opacity: 0;
+
+        -webkit-transition: opacity var(--nav-hov-trans-length) ease-out;
+        transition: opacity var(--nav-hov-trans-length) ease-out;
     }
 
     nav li:hover div,
     nav li:focus div,
     nav li:active div {
-        display: initial;
+        /* display: initial; */
+        opacity: 1;
     }
 
         .neg-rad-lt,
@@ -678,16 +689,10 @@ nav li:active {
         /* set origin or transormation to halfway down left side */
         -webkit-transform-origin: 0 50%;
         transform-origin: 0 50%;
-        
-        /* set which proprty will apply to transition */
-        -webkit-transition-property: transform;
-        transition-property: transform;
-        /* set transition length */
-        -webkit-transition-duration: var(--hov-trans-length);
-        transition-duration: var(--hov-trans-length);
-        /* set manner of transition timing */
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
+
+        /* set transition rules to ease in tranform */
+        -webkit-transition: transform var(--hov-trans-length) ease-out;
+        transition: transform var(--hov-trans-length) ease-out;
     }
 
     .card:hover::before,
@@ -696,10 +701,6 @@ nav li:active {
         /* set final x-axis scaling after transition */
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
-        
-        /* set transition timing */
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
     }
 
     /* SECONDARY CONTENT HIDE/SHOW */
@@ -910,7 +911,8 @@ nav li:active {
 
                 ul.nav1,
                 ul.nav2 {
-                    gap: 1rem;
+                    /* gap: 1rem; */
+                    gap: 1.5rem;
                 }
 
                 ul.nav1  {
@@ -940,7 +942,7 @@ nav li:active {
                         }
 
                 nav .spacer {
-                    height: 2rem;
+                    height: 3rem;
                 }
 
     /* PRIMARY CONTENT -------------------- */
